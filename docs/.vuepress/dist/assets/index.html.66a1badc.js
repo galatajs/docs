@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-3cc7eff4","path":"/tr/packages/create-istanbul/","title":"Create-Istanbul Paketi","lang":"tr-TR","frontmatter":{"lang":"tr-TR","footer":false,"lastUpdated":true,"contributors":true},"excerpt":"","headers":[],"git":{},"filePathRelative":"tr/packages/create-istanbul/README.md"}');export{t as data};

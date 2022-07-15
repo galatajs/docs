@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-5dbe67cc","path":"/tr/about/","title":"\u0130stanbul Hakk\u0131nda","lang":"tr-TR","frontmatter":{"lang":"tr-TR","footer":false,"lastUpdated":true,"contributors":true},"excerpt":"","headers":[],"git":{},"filePathRelative":"tr/about/README.md"}');export{t as data};

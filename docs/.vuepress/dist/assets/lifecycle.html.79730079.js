@@ -1,0 +1,1 @@
+const e=JSON.parse(`{"key":"v-80405180","path":"/essentials/lifecycle.html","title":"Istanbul's Lifecycle","lang":"en-US","frontmatter":{"footer":false,"lastUpdated":true,"contributors":true},"excerpt":"","headers":[],"git":{},"filePathRelative":"essentials/lifecycle.md"}`);export{e as data};

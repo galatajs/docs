@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-e419ed3e","path":"/packages/rules/","title":"Rules Package","lang":"en-US","frontmatter":{"footer":false,"lastUpdated":true,"contributors":true},"excerpt":"","headers":[],"git":{},"filePathRelative":"packages/rules/README.md"}');export{e as data};

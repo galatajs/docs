@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-1afb42fd","path":"/tr/essentials/module-based-architecture.html","title":"Mod\xFCl Bazl\u0131 Mimari","lang":"tr-TR","frontmatter":{"lang":"tr-TR","footer":false,"lastUpdated":true,"contributors":true},"excerpt":"","headers":[],"git":{},"filePathRelative":"tr/essentials/module-based-architecture.md"}');export{t as data};

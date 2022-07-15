@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-7096efe0","path":"/faq/why-istanbul.html","title":"Why Istanbul?","lang":"en-US","frontmatter":{"footer":false,"lastUpdated":true,"contributors":true},"excerpt":"","headers":[],"git":{},"filePathRelative":"faq/why-istanbul.md"}');export{t as data};

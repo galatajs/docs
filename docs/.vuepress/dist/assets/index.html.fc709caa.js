@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-4249d394","path":"/migration/nestjs/","title":"Migrate From NestJS","lang":"en-US","frontmatter":{"footer":false,"lastUpdated":true,"contributors":true},"excerpt":"","headers":[],"git":{},"filePathRelative":"migration/nestjs/README.md"}');export{t as data};

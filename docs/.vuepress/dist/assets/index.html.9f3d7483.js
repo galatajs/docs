@@ -1,0 +1,1 @@
+const t=JSON.parse(`{"key":"v-8884bbf0","path":"/tr/migration/fastify/","title":"Fastify'dan G\xF6\xE7 Etmek","lang":"tr-TR","frontmatter":{"lang":"tr-TR","footer":false,"lastUpdated":true,"contributors":true},"excerpt":"","headers":[],"git":{},"filePathRelative":"tr/migration/fastify/README.md"}`);export{t as data};

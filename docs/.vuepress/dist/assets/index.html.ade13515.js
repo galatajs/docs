@@ -1,0 +1,1 @@
+const t=JSON.parse(`{"key":"v-b8e0fed6","path":"/tr/migration/nestjs/","title":"NestJS'den G\xF6\xE7 Etmek","lang":"tr-TR","frontmatter":{"lang":"tr-TR","footer":false,"lastUpdated":true,"contributors":true},"excerpt":"","headers":[],"git":{},"filePathRelative":"tr/migration/nestjs/README.md"}`);export{t as data};

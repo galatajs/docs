@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-6cbffb26","path":"/tr/other/support-us.html","title":"Bizi Destekle","lang":"tr-TR","frontmatter":{"lang":"tr-TR","footer":false,"lastUpdated":true,"contributors":true},"excerpt":"","headers":[],"git":{},"filePathRelative":"tr/other/support-us.md"}');export{t as data};

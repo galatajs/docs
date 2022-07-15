@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-4847be95","path":"/packages/inject/","title":"Inject Package","lang":"en-US","frontmatter":{"footer":false,"lastUpdated":true,"contributors":true},"excerpt":"","headers":[],"git":{},"filePathRelative":"packages/inject/README.md"}');export{e as data};

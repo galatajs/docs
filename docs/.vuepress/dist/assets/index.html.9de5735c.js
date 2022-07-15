@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-27a6ebb1","path":"/tr/faq/","title":"S\u0131k Sorulan Sorular","lang":"tr-TR","frontmatter":{"lang":"tr-TR","footer":false,"lastUpdated":true,"contributors":true},"excerpt":"","headers":[],"git":{},"filePathRelative":"tr/faq/README.md"}');export{t as data};

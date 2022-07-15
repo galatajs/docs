@@ -1,0 +1,17 @@
+{
+  "name": "istanbul-docs",
+  "version": "0.0.1",
+  "description": "documentation of istanbul framework",
+  "main": "index.js",
+  "author": "Sami Salih İBRAHİMBAŞ",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@vuepress/plugin-search": "^2.0.0-beta.49",
+    "vuepress": "^2.0.0-beta.49"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs --config ./config.ts",
+    "docs:build": "vuepress build docs  --config ./config.ts"
+  }
+}

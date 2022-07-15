@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-68c837f2","path":"/tr/packages/i18n/","title":"I18n Paketi","lang":"tr-TR","frontmatter":{"lang":"tr-TR","footer":false,"lastUpdated":true,"contributors":true},"excerpt":"","headers":[],"git":{},"filePathRelative":"tr/packages/i18n/README.md"}');export{t as data};
