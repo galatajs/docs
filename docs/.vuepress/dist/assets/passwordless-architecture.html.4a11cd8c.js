@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-74aee142","path":"/faq/passwordless-architecture.html","title":"Passwordless Architecture","lang":"en-US","frontmatter":{"footer":false,"lastUpdated":true,"contributors":true},"excerpt":"","headers":[],"git":{},"filePathRelative":"faq/passwordless-architecture.md"}');export{e as data};

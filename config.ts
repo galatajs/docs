@@ -1,5 +1,6 @@
 import { defaultTheme, defineUserConfig } from "vuepress";
 import { searchPlugin } from "@vuepress/plugin-search";
+import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
 import { EnglishSidebar } from "./i18n/en-US/sidebar";
 import { TurkishSidebar } from "./i18n/tr-TR/sidebar";
 import { EnglishNavbar } from "./i18n/en-US/navbar";
@@ -22,6 +23,9 @@ export default defineUserConfig({
     },
   },
   plugins: [
+    googleAnalyticsPlugin({
+      id: "G-33CFH4WMVL",
+    }),
     searchPlugin({
       locales: {
         "/": {

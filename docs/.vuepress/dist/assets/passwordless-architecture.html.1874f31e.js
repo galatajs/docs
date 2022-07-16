@@ -1,1 +1,0 @@
-const t=JSON.parse('{"key":"v-5d373704","path":"/tr/faq/passwordless-architecture.html","title":"\u015Eifresiz Mimari","lang":"tr-TR","frontmatter":{"lang":"tr-TR","footer":false,"lastUpdated":true,"contributors":true},"excerpt":"","headers":[],"git":{},"filePathRelative":"tr/faq/passwordless-architecture.md"}');export{t as data};

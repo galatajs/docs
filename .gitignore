@@ -1,4 +1,8 @@
 node_modules
 .temp
 .cache
+<<<<<<< HEAD
 *-lock.json
+=======
+dist
+>>>>>>> main

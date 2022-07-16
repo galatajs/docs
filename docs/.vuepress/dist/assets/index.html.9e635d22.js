@@ -1,1 +1,0 @@
-const t=JSON.parse('{"key":"v-297e6f84","path":"/packages/http/","title":"Http Package","lang":"en-US","frontmatter":{"footer":false,"lastUpdated":true,"contributors":true},"excerpt":"","headers":[],"git":{},"filePathRelative":"packages/http/README.md"}');export{t as data};
