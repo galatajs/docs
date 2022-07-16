@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-29a0ed30","path":"/packages/i18n/","title":"I18n Package","lang":"en-US","frontmatter":{"footer":false,"lastUpdated":true,"contributors":true},"excerpt":"","headers":[],"git":{},"filePathRelative":"packages/i18n/README.md"}');export{e as data};

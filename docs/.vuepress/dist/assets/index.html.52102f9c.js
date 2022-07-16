@@ -1,1 +1,0 @@
-const t=JSON.parse('{"key":"v-81f02518","path":"/tr/packages/inject/","title":"Inject Paketi","lang":"tr-TR","frontmatter":{"lang":"tr-TR","footer":false,"lastUpdated":true,"contributors":true},"excerpt":"","headers":[],"git":{},"filePathRelative":"tr/packages/inject/README.md"}');export{t as data};

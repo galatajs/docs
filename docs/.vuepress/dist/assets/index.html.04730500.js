@@ -1,1 +1,0 @@
-const t=JSON.parse('{"key":"v-5a5b34d2","path":"/tr/packages/websocket/","title":"Websocket Paketi","lang":"tr-TR","frontmatter":{"lang":"tr-TR","footer":false,"lastUpdated":true,"contributors":true},"excerpt":"","headers":[],"git":{},"filePathRelative":"tr/packages/websocket/README.md"}');export{t as data};

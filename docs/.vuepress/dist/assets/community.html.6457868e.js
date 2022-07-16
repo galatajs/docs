@@ -1,1 +1,0 @@
-const t=JSON.parse('{"key":"v-fcf19dac","path":"/tr/about/community.html","title":"Topluluk","lang":"tr-TR","frontmatter":{"lang":"tr-TR","footer":false,"lastUpdated":true,"contributors":true},"excerpt":"","headers":[],"git":{},"filePathRelative":"tr/about/community.md"}');export{t as data};

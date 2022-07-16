@@ -1,1 +1,0 @@
-const t=JSON.parse('{"key":"v-6319cde2","path":"/tr/packages/validate/","title":"Validate Paketi","lang":"tr-TR","frontmatter":{"lang":"tr-TR","footer":false,"lastUpdated":true,"contributors":true},"excerpt":"","headers":[],"git":{},"filePathRelative":"tr/packages/validate/README.md"}');export{t as data};

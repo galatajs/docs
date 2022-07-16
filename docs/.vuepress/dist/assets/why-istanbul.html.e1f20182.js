@@ -1,1 +1,0 @@
-const t=JSON.parse('{"key":"v-2d4c3461","path":"/tr/faq/why-istanbul.html","title":"Neden \u0130stanbul?","lang":"tr-TR","frontmatter":{"lang":"tr-TR","footer":false,"lastUpdated":true,"contributors":true},"excerpt":"","headers":[],"git":{},"filePathRelative":"tr/faq/why-istanbul.md"}');export{t as data};

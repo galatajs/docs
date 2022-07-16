@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-5f076e08","path":"/essentials/module-based-architecture.html","title":"Module Based Architecture","lang":"en-US","frontmatter":{"footer":false,"lastUpdated":true,"contributors":true},"excerpt":"","headers":[],"git":{},"filePathRelative":"essentials/module-based-architecture.md"}');export{e as data};

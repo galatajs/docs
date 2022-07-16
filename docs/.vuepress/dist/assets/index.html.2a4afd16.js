@@ -1,1 +1,0 @@
-const t=JSON.parse('{"key":"v-89dbfabc","path":"/tr/packages/rules/","title":"Rules Paketi","lang":"tr-TR","frontmatter":{"lang":"tr-TR","footer":false,"lastUpdated":true,"contributors":true},"excerpt":"","headers":[],"git":{},"filePathRelative":"tr/packages/rules/README.md"}');export{t as data};

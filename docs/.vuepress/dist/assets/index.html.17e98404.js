@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-33ccc411","path":"/packages/websocket/","title":"Websocket Package","lang":"en-US","frontmatter":{"footer":false,"lastUpdated":true,"contributors":true},"excerpt":"","headers":[],"git":{},"filePathRelative":"packages/websocket/README.md"}');export{e as data};
