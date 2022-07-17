@@ -24,7 +24,7 @@ export default defineUserConfig({
   },
   plugins: [
     googleAnalyticsPlugin({
-      id: "G-RJ10Y6LLML",
+      id: "G-33CFH4WMVL",
     }),
     searchPlugin({
       locales: {
