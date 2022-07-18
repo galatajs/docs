@@ -24,11 +24,30 @@ footerHtml: true
 
 Hayat her şeyi düşünmek için çok kısa. Bir zamanlar sizin için düşündük, şimdi gerisi aşağıdaki kodlar kadar zahmetsiz!
 
-
 <CodeGroup>
-  <CodeGroupItem title="HTTP" active>
+<CodeGroupItem title="HTTP" active>
+<CodeGroup>
+<CodeGroupItem title="TypeScript" active>
 
 ```typescript:
+import { createApp, App } from "@istanbul/app"
+import { createHttpServer, createRouter, Request, Response, NextFunction } from "@istanbul/http"
+
+const app : App = createApp()
+app.register(createHttpServer())
+
+const router = createRouter()
+router.get("view", (req : Request, res : Response, next : NextFunction) => {
+    res.success("IstanbulJS'e Hoş Geldin!")
+})
+
+app.start()
+```
+
+</CodeGroupItem>
+<CodeGroupItem title="EcmaScript">
+
+```javascript:
 import { createApp } from "@istanbul/app"
 import { createHttpServer, createRouter } from "@istanbul/http"
 
@@ -37,17 +56,61 @@ app.register(createHttpServer())
 
 const router = createRouter()
 router.get("view", (req, res, next) => {
-    res.success("Welcome to IstanbulJS!")
+    res.success("IstanbulJS'e Hoş Geldin!")
 })
 
 app.start()
 ```
 
-  </CodeGroupItem>
+</CodeGroupItem>
+<CodeGroupItem title="CommonJS">
 
-  <CodeGroupItem title="WEBSOCKET">
+```javascript:
+const { createApp } = require("@istanbul/app")
+const { createHttpServer, createRouter } = require("@istanbul/http")
+
+const app = createApp()
+app.register(createHttpServer())
+
+const router = createRouter()
+router.get("view", (req, res, next) => {
+    res.success("IstanbulJS'e Hoş Geldin!")
+})
+
+app.start()
+```
+
+</CodeGroupItem>
+</CodeGroup>
+
+</CodeGroupItem>
+
+<CodeGroupItem title="WEBSOCKET">
   
+<CodeGroup>
+
+<CodeGroupItem title="TypeScript" active>
+
 ```typescript:
+import { createApp, App } from "@istanbul/app"
+import { createWsApp, WsApp, Socket, Request, Response } from "@istanbul/ws"
+
+const app : App = createApp()
+const ws : WsApp = createWsApp()
+app.register(ws)
+
+ws.listen("view", (socket : Socket, req : Request, res : Response) => {
+    res.reply("IstanbulJS'e Hoş Geldin!")
+})
+
+app.start()
+```
+
+</CodeGroupItem>
+
+<CodeGroupItem title="EcmaScript">
+
+```javascript:
 import { createApp } from "@istanbul/app"
 import { createWsApp } from "@istanbul/ws"
 
@@ -56,13 +119,36 @@ const ws = createWsApp()
 app.register(ws)
 
 ws.listen("view", (socket, req, res) => {
-    res.reply("Welcome to IstanbulJS!")
+    res.reply("IstanbulJS'e Hoş Geldin!")
 })
 
 app.start()
 ```
 
-  </CodeGroupItem>
+</CodeGroupItem>
+
+<CodeGroupItem title="CommonJS">
+
+```javascript:
+const { createApp } = require("@istanbul/app")
+const { createWsApp } = require("@istanbul/ws")
+
+const app = createApp()
+const ws = createWsApp()
+app.register(ws)
+
+ws.listen("view", (socket, req, res) => {
+    res.reply("IstanbulJS'e Hoş Geldin!")
+})
+
+app.start()
+```
+
+</CodeGroupItem>
+
+</CodeGroup>
+
+</CodeGroupItem>
 </CodeGroup>
 
 Kodlar kısa olsa da yapabileceğimiz birçok şey var. <a href="/introduction/getting-started">Şimdi</a> başlayın.
