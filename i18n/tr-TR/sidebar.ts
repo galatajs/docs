@@ -10,15 +10,11 @@ export const TurkishSidebar: SidebarConfig = [
     collapsible: false,
     children: [
       {
-        text: "Bir Uygulama Oluştur",
-        link: "/tr/essentials/create-app",
-      },
-      {
         text: "İstanbul'un Yaşam Döngüsü",
         link: "/tr/essentials/lifecycle",
       },
       {
-        text: "Modül Bazlı Mimari",
+        text: "Modül Tabanlı Mimari",
         link: "/tr/essentials/module-based-architecture",
       },
     ],

@@ -17,7 +17,7 @@ features:
   - title: Esnek
     details: İstanbul istediğiniz kadardır. İstanbul, en küçükten en büyük ölçeğe kadar tüm ölçeklere uygun altyapı sunmaktadır.
   - title: Kullanıcı Dostu
-    details: İstanbul uzaylılar tarafından değil, geliştiriciler tarafından geliştirildi. Bu nedenlei ihtiyacınız olabilecek her şeye ulaşmak daha kolay ve zahmetsiz.
+    details: İstanbul uzaylılar tarafından değil, geliştiriciler tarafından geliştirildi. Bu nedenle ihtiyacınız olabilecek her şeye ulaşmak daha kolay ve zahmetsiz.
 footer: <p class="license"><a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a> altında yayınlandı.</p><p class="copyright">Tüm hakları saklıdır. © 2022 Sami Salih İbrahimbaş</p>
 footerHtml: true
 ---

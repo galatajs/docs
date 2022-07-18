@@ -152,7 +152,7 @@ app.start()
 </CodeGroupItem>
 </CodeGroup>
 
-Although the codes are short, there is that much you can do. Start <a href="/introduction/getting-started">now</a>.
+Although the codes are short, there is that much you can do. Start <a href="/introduction">now</a>.
 
 <h3 class="text-center">Sponsors</h3>
 
