@@ -20,7 +20,7 @@ const setCache = (key: string, value: string): void => {
 const removeClassFromWindow = (className: string): void => {
   // @ts-ignore
   if (__VUEPRESS_SSR__) return;
-  window.document.documentElement.classList.add(className);
+  window.document.documentElement.classList.remove(className);
 };
 
 const addClassToWindow = (className: string): void => {
