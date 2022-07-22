@@ -73,11 +73,9 @@ Peki bunlar ne anlama geliyor?
 
 Bir modül oluşturmak için aşağıdaki gibi bir kod yazmanız gerekecek. Bunların ne anlama geldiğini birazdan açıklayacağız.
 
+<div class="prefer-typescript">
 
-<CodeGroup>
-<CodeGroupItem title="TypeScript" active>
-
-```typescript:
+```typescript:no-line-numbers
 import { createModule, Module } from "@istanbul/app"
 import { ProductService } from "./product.service"
 
@@ -87,10 +85,11 @@ export const productModule : Module = createModule("product", {
 })
 ```
 
-</CodeGroupItem>
-<CodeGroupItem title="EcmaScript">
+</div>
 
-```javascript:
+<div class="prefer-ecmascript">
+
+```javascript:no-line-numbers
 import { createModule } from "@istanbul/app"
 import { ProductService } from "./product.service"
 
@@ -100,10 +99,11 @@ export const productModule = createModule("product", {
 })
 ```
 
-</CodeGroupItem>
-<CodeGroupItem title="CommonJS">
+</div>
 
-```javascript:
+<div class="prefer-commonjs">
+
+```javascript:no-line-numbers
 const { createModule } = require("@istanbul/app")
 const { ProductService } = require("./product.service")
 
@@ -117,8 +117,7 @@ module.exports = {
 }
 ```
 
-</CodeGroupItem>
-</CodeGroup>
+</div>
 
 Modüller arasındaki ilişkiyi anlamak için `category.module` dosyamız muhtemelen şöyle görünecektir.
 
@@ -129,10 +128,10 @@ Modüller arasındaki ilişkiyi anlamak için `category.module` dosyamız muhtem
 :::
 
 
-<CodeGroup>
-<CodeGroupItem title="TypeScript" active>
 
-```typescript:
+<div class="prefer-typescript">
+
+```typescript:no-line-numbers
 import { createModule, Module } from "@istanbul/app"
 import { CategoryService } from "./category.service"
 import { CategoryController } from "./category.controller"
@@ -144,10 +143,11 @@ export const categoryModule : Module = createModule("category", {
 })
 ```
 
-</CodeGroupItem>
-<CodeGroupItem title="EcmaScript">
+</div>
 
-```javascript:
+<div class="prefer-ecmascript">
+
+```javascript:no-line-numbers
 import { createModule } from "@istanbul/app"
 import { CategoryService } from "./category.service"
 import { CategoryController } from "./category.controller"
@@ -159,10 +159,11 @@ export const categoryModule = createModule("category", {
 })
 ```
 
-</CodeGroupItem>
-<CodeGroupItem title="CommonJS">
+</div>
 
-```javascript:
+<div class="prefer-commonjs">
+
+```javascript:no-line-numbers
 const { createModule } = require("@istanbul/app")
 const { CategoryService } = require("./category.service")
 const { CategoryController } = require("./category.controller")
@@ -178,8 +179,7 @@ module.exports = {
 }
 ```
 
-</CodeGroupItem>
-</CodeGroup>
+</div>
 
 Ve son olarak, modül tabanlı mimaride bir ana modüle ihtiyacımız var. Bunun nedeni, <span class="text-primary">IstanbulJS</span>'in modüller arasında parçadan bütüne bir ilişki kurmasıdır.
 
@@ -190,10 +190,9 @@ Buradaki import sırası önemlidir. Öncelikle diğer modüllerde kullanılan m
 :::
 
 
-<CodeGroup>
-<CodeGroupItem title="TypeScript" active>
+<div class="prefer-typescript">
 
-```typescript:
+```typescript:no-line-numbers
 import { createModule, Module } from "@istanbul/app"
 import { productModule } from "./product/product.module"
 import { categoryModule } from "./category/category.module"
@@ -203,10 +202,12 @@ export const mainModule : Module = createModule("main", {
 })
 ```
 
-</CodeGroupItem>
-<CodeGroupItem title="EcmaScript">
+</div>
 
-```javascript:
+
+<div class="prefer-ecmascript">
+
+```javascript:no-line-numbers
 import { createModule } from "@istanbul/app"
 import { productModule } from "./product/product.module"
 import { categoryModule } from "./category/category.module"
@@ -216,10 +217,12 @@ export const mainModule = createModule("main", {
 })
 ```
 
-</CodeGroupItem>
-<CodeGroupItem title="CommonJS">
+</div>
 
-```javascript:
+
+<div class="prefer-commonjs">
+
+```javascript:no-line-numbers
 const { createModule } = require("@istanbul/app")
 const { productModule } = require("./product/product.module")
 const { categoryModule } = require("./category/category.module")
@@ -232,18 +235,15 @@ module.exports = {
 }
 ```
 
-</CodeGroupItem>
-</CodeGroup>
+</div>
 
 Ve kök dizindeki ana dosyamız şöyle görünecek.
 
 `createApp` fonksiyonu, isteğe bağlı bir `mainModule` alır. `createApp` işlevine bir modül sağlarsanız, <span class="text-primary">IstanbulJS</span>, modül tabanlı bir mimari kullanıyormuşsunuz gibi davranır.
 
+<div class="prefer-typescript">
 
-<CodeGroup>
-<CodeGroupItem title="TypeScript" active>
-
-```typescript:
+```typescript:no-line-numbers
 import { createApp, App } from "@istanbul/app"
 import { mainModule } from "./src/main.module"
 
@@ -251,10 +251,12 @@ const app : App = createApp(mainModule);
 app.start();
 ```
 
-</CodeGroupItem>
-<CodeGroupItem title="EcmaScript">
+</div>
 
-```javascript:
+
+<div class="prefer-ecmascript">
+
+```javascript:no-line-numbers
 import { createApp } from "@istanbul/app"
 import { mainModule } from "./src/main.module"
 
@@ -262,10 +264,12 @@ const app = createApp(mainModule);
 app.start();
 ```
 
-</CodeGroupItem>
-<CodeGroupItem title="CommonJS">
+</div>
 
-```javascript:
+
+<div class="prefer-commonjs">
+
+```javascript:no-line-numbers
 const { createApp } = require("@istanbul/app")
 const { mainModule } = require("./src/main.module")
 
@@ -273,8 +277,7 @@ const app = createApp(mainModule);
 app.start();
 ```
 
-</CodeGroupItem>
-</CodeGroup>
+</div>
 
 Bu kadar! Basit bir modül tabanlı sistem bu şekilde çalışır.
 
