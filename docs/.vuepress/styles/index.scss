@@ -148,3 +148,25 @@ html.dark {
 .custom-container.tip .text-primary {
   color: var(--c-tip);
 }
+
+.prefer-commonjs,
+.prefer-typescript,
+.prefer-ecmascript {
+  display: none;
+}
+
+html.syntax-preference-typescript:not(.syntax-preference-ecmascript, .syntax-preference-commonjs) {
+  .prefer-typescript {
+    display: block;
+  }
+}
+html.syntax-preference-ecmascript:not(.syntax-preference-typescript, .syntax-preference-commonjs) {
+  .prefer-ecmascript {
+    display: block;
+  }
+}
+html.syntax-preference-commonjs:not(.syntax-preference-typescript, .syntax-preference-ecmascript) {
+  .prefer-commonjs {
+    display: block;
+  }
+}

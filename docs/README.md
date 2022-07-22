@@ -18,8 +18,16 @@ features:
     details: Istanbul is as much as you want. Istanbul provides a suitable infrastructure for all scales, from the smallest to the largest.
   - title: Friendly
     details: Istanbul was developed by developers, not aliens. Therefore, it is easier and less troublesome to reach everything you may need.
+  - title: The Syntax You Want
+    details: Istanbul is written in TypeScript and compiled to JavaScript. Therefore, it can be used as CommonJS, EcmaScript or TypeScript.
+  - title: In All Areas
+    details: Develop anything, whether you want a bank, cli, chat or blog. Istanbul has an infrastructure that will make your job easier!
+  - title: Easy to Use
+    details: Istanbul quickly creates module, service, controller and gateway with its cli package and allows you to focus on your work.
+  
 footer: <p class="license">Released under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>.</p><p class="copyright">Copyright © 2022 Sami Salih İbrahimbaş</p>
 footerHtml: true
+layout: IstanbulLayout
 ---
 
 Life is too short to think about everything. We thought for you once, now the rest is as effortless as the codes below!
@@ -27,8 +35,8 @@ Life is too short to think about everything. We thought for you once, now the re
 
 <CodeGroup>
 <CodeGroupItem title="HTTP" active>
-<CodeGroup>
-<CodeGroupItem title="TypeScript" active>
+
+<div class="prefer-typescript">
 
 ```typescript:
 import { createApp, App } from "@istanbul/app"
@@ -45,8 +53,10 @@ router.get("view", (req : Request, res : Response, next : NextFunction) => {
 app.start()
 ```
 
-</CodeGroupItem>
-<CodeGroupItem title="EcmaScript">
+</div>
+
+
+<div class="prefer-ecmascript">
 
 ```javascript:
 import { createApp } from "@istanbul/app"
@@ -63,8 +73,10 @@ router.get("view", (req, res, next) => {
 app.start()
 ```
 
-</CodeGroupItem>
-<CodeGroupItem title="CommonJS">
+</div>
+
+
+<div class="prefer-commonjs">
 
 ```javascript:
 const { createApp } = require("@istanbul/app")
@@ -81,16 +93,13 @@ router.get("view", (req, res, next) => {
 app.start()
 ```
 
-</CodeGroupItem>
-</CodeGroup>
+</div>
 
 </CodeGroupItem>
 
-<CodeGroupItem title="WEBSOCKET">
-  
-<CodeGroup>
+<CodeGroupItem title="WEBSOCKET" active>
 
-<CodeGroupItem title="TypeScript" active>
+<div class="prefer-typescript">
 
 ```typescript:
 import { createApp, App } from "@istanbul/app"
@@ -107,9 +116,10 @@ ws.listen("view", (socket : Socket, req : Request, res : Response) => {
 app.start()
 ```
 
-</CodeGroupItem>
+</div>
 
-<CodeGroupItem title="EcmaScript">
+
+<div class="prefer-ecmascript">
 
 ```javascript:
 import { createApp } from "@istanbul/app"
@@ -126,9 +136,10 @@ ws.listen("view", (socket, req, res) => {
 app.start()
 ```
 
-</CodeGroupItem>
+</div>
 
-<CodeGroupItem title="CommonJS">
+
+<div class="prefer-commonjs">
 
 ```javascript:
 const { createApp } = require("@istanbul/app")
@@ -145,14 +156,12 @@ ws.listen("view", (socket, req, res) => {
 app.start()
 ```
 
-</CodeGroupItem>
-
-</CodeGroup>
+</div>
 
 </CodeGroupItem>
 </CodeGroup>
 
-Although the codes are short, there is that much you can do. Start <a href="/introduction">now</a>.
+Although the codes are short, there is that much you can do. Start <a href="/introduction/#introduction">now</a>.
 
 <h3 class="text-center">Sponsors</h3>
 
@@ -167,3 +176,10 @@ Although the codes are short, there is that much you can do. Start <a href="/int
   <span class="question-mark">?</span>
 </div>
 </div>
+
+
+<script setup>
+const abc = () => {
+  console.log('abc')
+}
+</script>

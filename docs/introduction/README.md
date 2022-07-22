@@ -5,6 +5,7 @@ contributors: true
 next:
   text: Istanbul's Lifecycle
   link: /essentials/lifecycle.html
+layout: IstanbulLayout
 ---
 
 # Introduction
@@ -81,3 +82,7 @@ Then you will be asked questions such as the following. Enter the answers suitab
 <span style="color:#A6ACCD;">Done.</span></code></pre></div>
 
 When you complete this stage, <span class="text-primary">Istanbul</span> will provide a basic structure for you. After that, you can follow the packages own guides according to your needs or skip to the next document for more detailed information about <span class="text-primary">Istanbul</span>.
+
+## Select Your Syntax
+
+<span class="text-primary">Istanbul</span> can be written in Typescript, JavaScript or CommonJS and supports all of them %100. To see the document in the syntax you want, please click the syntax icon in the top right to change it.

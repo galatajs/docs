@@ -2,6 +2,7 @@
 footer: false
 lastUpdated: true
 contributors: true
+layout: IstanbulLayout
 ---
 
 # Module Based Architecture
@@ -26,7 +27,7 @@ The most important features of <span class="text-primary">IstanbulJS</span> are 
 
 First of all, you are completely free in this regard. But if you are not sure, you can use the Recommended folder structure.
 
-```:no-line-numbers
+```
 📦 istanbul-project
  ┣ 📂 src
  ┃ ┗ 📂 product
@@ -71,10 +72,9 @@ So what do these mean?
 
 To create a module you will need to write code like the one below. We'II explain what these mean in a moment.
 
-<CodeGroup>
-<CodeGroupItem title="TypeScript" active>
+<div class="prefer-typescript">
 
-```typescript:
+```typescript:no-line-numbers
 import { createModule, Module } from "@istanbul/app"
 import { ProductService } from "./product.service"
 
@@ -84,10 +84,11 @@ export const productModule : Module = createModule("product", {
 })
 ```
 
-</CodeGroupItem>
-<CodeGroupItem title="EcmaScript">
+</div>
 
-```javascript:
+<div class="prefer-ecmascript">
+
+```javascript:no-line-numbers
 import { createModule } from "@istanbul/app"
 import { ProductService } from "./product.service"
 
@@ -97,10 +98,11 @@ export const productModule = createModule("product", {
 })
 ```
 
-</CodeGroupItem>
-<CodeGroupItem title="CommonJS">
+</div>
 
-```javascript:
+<div class="prefer-commonjs">
+
+```javascript:no-line-numbers
 const { createModule } = require("@istanbul/app")
 const { ProductService } = require("./product.service")
 
@@ -114,8 +116,7 @@ module.exports = {
 }
 ```
 
-</CodeGroupItem>
-</CodeGroup>
+</div>
 
 To understand the relationship between modules, our `category.module` file would probably look like this.
 
@@ -125,10 +126,11 @@ The order of providers's is important. Here, if the `CategoryService` file is us
 
 :::
 
-<CodeGroup>
-<CodeGroupItem title="TypeScript" active>
 
-```typescript:
+
+<div class="prefer-typescript">
+
+```typescript:no-line-numbers
 import { createModule, Module } from "@istanbul/app"
 import { CategoryService } from "./category.service"
 import { CategoryController } from "./category.controller"
@@ -140,10 +142,11 @@ export const categoryModule : Module = createModule("category", {
 })
 ```
 
-</CodeGroupItem>
-<CodeGroupItem title="EcmaScript">
+</div>
 
-```javascript:
+<div class="prefer-ecmascript">
+
+```javascript:no-line-numbers
 import { createModule } from "@istanbul/app"
 import { CategoryService } from "./category.service"
 import { CategoryController } from "./category.controller"
@@ -155,10 +158,11 @@ export const categoryModule = createModule("category", {
 })
 ```
 
-</CodeGroupItem>
-<CodeGroupItem title="CommonJS">
+</div>
 
-```javascript:
+<div class="prefer-commonjs">
+
+```javascript:no-line-numbers
 const { createModule } = require("@istanbul/app")
 const { CategoryService } = require("./category.service")
 const { CategoryController } = require("./category.controller")
@@ -174,8 +178,8 @@ module.exports = {
 }
 ```
 
-</CodeGroupItem>
-</CodeGroup>
+</div>
+
 
 And finally, we need to have a main module in module-based architecture. This is because <span class="text-primary">IstanbulJS</span> establishes a part-to-whole relationship between modules.
 
@@ -186,10 +190,9 @@ The import order here is important. First, the modules used in other modules sho
 :::
 
 
-<CodeGroup>
-<CodeGroupItem title="TypeScript" active>
+<div class="prefer-typescript">
 
-```typescript:
+```typescript:no-line-numbers
 import { createModule, Module } from "@istanbul/app"
 import { productModule } from "./product/product.module"
 import { categoryModule } from "./category/category.module"
@@ -199,10 +202,12 @@ export const mainModule : Module = createModule("main", {
 })
 ```
 
-</CodeGroupItem>
-<CodeGroupItem title="EcmaScript">
+</div>
 
-```javascript:
+
+<div class="prefer-ecmascript">
+
+```javascript:no-line-numbers
 import { createModule } from "@istanbul/app"
 import { productModule } from "./product/product.module"
 import { categoryModule } from "./category/category.module"
@@ -212,10 +217,12 @@ export const mainModule = createModule("main", {
 })
 ```
 
-</CodeGroupItem>
-<CodeGroupItem title="CommonJS">
+</div>
 
-```javascript:
+
+<div class="prefer-commonjs">
+
+```javascript:no-line-numbers
 const { createModule } = require("@istanbul/app")
 const { productModule } = require("./product/product.module")
 const { categoryModule } = require("./category/category.module")
@@ -228,17 +235,15 @@ module.exports = {
 }
 ```
 
-</CodeGroupItem>
-</CodeGroup>
+</div>
 
 And our main file in the root directory will look like this. 
 
 The `createApp` function takes an optional `mainModule`. If you provide a module to the `createApp` function, <span class="text-primary">IstanbulJS</span> acts as if you are using a module-based architecture.
 
-<CodeGroup>
-<CodeGroupItem title="TypeScript" active>
+<div class="prefer-typescript">
 
-```typescript:
+```typescript:no-line-numbers
 import { createApp, App } from "@istanbul/app"
 import { mainModule } from "./src/main.module"
 
@@ -246,10 +251,12 @@ const app : App = createApp(mainModule);
 app.start();
 ```
 
-</CodeGroupItem>
-<CodeGroupItem title="EcmaScript">
+</div>
 
-```javascript:
+
+<div class="prefer-ecmascript">
+
+```javascript:no-line-numbers
 import { createApp } from "@istanbul/app"
 import { mainModule } from "./src/main.module"
 
@@ -257,10 +264,12 @@ const app = createApp(mainModule);
 app.start();
 ```
 
-</CodeGroupItem>
-<CodeGroupItem title="CommonJS">
+</div>
 
-```javascript:
+
+<div class="prefer-commonjs">
+
+```javascript:no-line-numbers
 const { createApp } = require("@istanbul/app")
 const { mainModule } = require("./src/main.module")
 
@@ -268,8 +277,7 @@ const app = createApp(mainModule);
 app.start();
 ```
 
-</CodeGroupItem>
-</CodeGroup>
+</div>
 
 That's it! This is how a simple module-based system works.
 

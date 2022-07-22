@@ -1,10 +1,12 @@
 import { defaultTheme, defineUserConfig } from "vuepress";
 import { searchPlugin } from "@vuepress/plugin-search";
 import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
-import { EnglishSidebar } from "./i18n/en-US/sidebar";
-import { TurkishSidebar } from "./i18n/tr-TR/sidebar";
-import { EnglishNavbar } from "./i18n/en-US/navbar";
-import { TurkishNavbar } from "./i18n/tr-TR/navbar";
+import { EnglishSidebar } from "../../i18n/en-US/sidebar";
+import { TurkishSidebar } from "../../i18n/tr-TR/sidebar";
+import { EnglishNavbar } from "../../i18n/en-US/navbar";
+import { TurkishNavbar } from "../../i18n/tr-TR/navbar";
+import registerComponentsPlugin from "@vuepress/plugin-register-components";
+import * as path from "path";
 
 export default defineUserConfig({
   lang: "en-US",
@@ -37,6 +39,14 @@ export default defineUserConfig({
       },
       // options
     }),
+    registerComponentsPlugin({
+      components: {
+        SyntaxPreferenceSwitch: path.resolve(
+          __dirname,
+          "./theme/SyntaxPreferenceSwitch.vue"
+        ),
+      },
+    }),
   ],
   theme: defaultTheme({
     logo: "/img/framework-logo.png",
@@ -61,6 +71,5 @@ export default defineUserConfig({
         toggleSidebar: "Kenar Çubuğunu Aç/Kapat",
       },
     },
-    repo: "istanbulnode/docs",
   }),
 });

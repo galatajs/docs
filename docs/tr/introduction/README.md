@@ -6,6 +6,7 @@ contributors: true
 next:
   text: İstanbul'un Yaşam Döngüsü
   link: /tr/essentials/lifecycle.html
+layout: IstanbulLayout
 ---
 
 # Giriş
@@ -84,3 +85,9 @@ Ardından aşağıdaki gibi sorular sorulacaktır. Projenize uygun cevapları gi
 <span style="color:#A6ACCD;">Done.</span></code></pre></div>
 
 Bu aşamayı tamamladığınızda <span class="text-primary">İstanbul</span> size temel bir yapı sağlayacaktır. Bundan sonra, ihtiyaçlarınıza göre paketlerin kendi kılavuzlarını takip edebilir veya <span class="text-primary">İstanbul</span> hakkında daha detaylı bilgi için bir sonraki belgeye geçebilirsiniz.
+
+## Sözdizimi'ni Tanımlayın
+
+## Select Your Syntax
+
+<span class="text-primary">Istanbul</span> TypeScript, JavaScript veya CommonJS ile yazılabilir ve hepsini 100% destekler. Belgeyi istediğiniz sözdiziminde görmek için lütfen değiştirmek için sağ üstteki sözdizimi simgesine tıklayın.
