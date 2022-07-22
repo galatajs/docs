@@ -5,27 +5,45 @@ import { App, ref } from "vue";
 
 const calculateClassName = (key: string): string => `syntax-preference-${key}`;
 
+const getCachedItem = (key: string): string | null => {
+  // @ts-ignore
+  if (!__VUEPRESS_SSR__) return localStorage.getItem(key);
+  return null;
+};
+
+const setCache = (key: string, value: string): void => {
+  // @ts-ignore
+  if (__VUEPRESS_SSR__) return;
+  localStorage.setItem(key, value);
+};
+
+const removeClassFromWindow = (className: string): void => {
+  // @ts-ignore
+  if (__VUEPRESS_SSR__) return;
+  window.document.documentElement.classList.add(calculateClassName(className));
+};
+
+const addClassToWindow = (className: string): void => {
+  // @ts-ignore
+  if (__VUEPRESS_SSR__) return;
+  window.document.documentElement.classList.add(calculateClassName(className));
+};
+
 const useUserJavaScriptModulePreference = (app: App) => {
   const config = {
     key: "cache:preference:js-module",
     defaultValue: "typescript",
   };
-  if (localStorage) {
-    const value = localStorage.getItem(config.key);
-    if (value) {
-      config.defaultValue = value;
-    }
+  const value = getCachedItem(config.key);
+  if (value) {
+    config.defaultValue = value;
   }
   const defaultModule = ref<string>(config.defaultValue);
-  window.document.documentElement.classList.add(
-    calculateClassName(defaultModule.value)
-  );
+  addClassToWindow(calculateClassName(defaultModule.value));
   const setJsModule = (value: string) => {
-    window.document.documentElement.classList.remove(
-      calculateClassName(defaultModule.value)
-    );
-    window.document.documentElement.classList.add(calculateClassName(value));
-    localStorage.setItem(config.key, value);
+    removeClassFromWindow(calculateClassName(defaultModule.value));
+    addClassToWindow(calculateClassName(value));
+    setCache(config.key, value);
     defaultModule.value = value;
   };
 
