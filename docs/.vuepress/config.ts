@@ -96,7 +96,7 @@ export default defineUserConfig({
       "meta",
       {
         name: "twitter:image",
-        content: "https://istanbuljs.com/logo.png",
+        content: "https://istanbuljs.org/logo.png",
       },
     ],
   ],
