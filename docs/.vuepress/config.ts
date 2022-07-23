@@ -73,7 +73,43 @@ export default defineUserConfig({
     [
       "meta",
       {
-        name: "twitter:title",
+        property: "og:image:type",
+        content: "image/png",
+      },
+    ],
+    [
+      "meta",
+      {
+        property: "og:image:width",
+        content: "500",
+      },
+    ],
+    [
+      "meta",
+      {
+        property: "og:image:height",
+        content: "500",
+      },
+    ],
+    [
+      "meta",
+      {
+        property: "og:image",
+        content: "https://istanbuljs.org/logo.png",
+      },
+    ],
+    [
+      "meta",
+      {
+        property: "og:url",
+        content: "https://istanbuljs.org/",
+      },
+    ],
+    ["meta", { property: "og:site_name", content: "IstanbulJS" }],
+    [
+      "meta",
+      {
+        property: "twitter:title",
         content:
           "IstanbulJS | The Progressive, Flexible and Friendly Full Stack NodeJS Framework",
       },
@@ -81,22 +117,36 @@ export default defineUserConfig({
     [
       "meta",
       {
-        name: "twitter:site",
+        property: "twitter:site",
         content: "@istanbuljs",
       },
     ],
     [
       "meta",
       {
-        name: "twitter:card",
-        content: "summary",
+        property: "twitter:card",
+        content: "summary_large_image",
       },
     ],
     [
       "meta",
       {
-        name: "twitter:image",
+        property: "twitter:image:src",
         content: "https://istanbuljs.org/logo.png",
+      },
+    ],
+    [
+      "meta",
+      {
+        property: "twitter:image:width",
+        content: "500",
+      },
+    ],
+    [
+      "meta",
+      {
+        property: "twitter:image:height",
+        content: "500",
       },
     ],
   ],
