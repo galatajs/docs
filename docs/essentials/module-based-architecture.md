@@ -27,46 +27,101 @@ The most important features of <span class="text-primary">IstanbulJS</span> are 
 
 First of all, you are completely free in this regard. But if you are not sure, you can use the Recommended folder structure.
 
-```
+<div class="prefer-typescript">
+
+```:no-line-numbers
 📦 istanbul-project
  ┣ 📂 src
  ┃ ┗ 📂 product
- ┃ ┃ ┣ 📜 product.controller.[js,ts]
- ┃ ┃ ┣ 📜 product.gateway.[js,ts]
- ┃ ┃ ┣ 📜 product.entity.[js,ts]
- ┃ ┃ ┣ 📜 product.module.[js,ts]
- ┃ ┃ ┗ 📜 product.service.[js,ts]
+ ┃ ┃ ┣ 📜 product.controller.ts
+ ┃ ┃ ┣ 📜 product.gateway.ts
+ ┃ ┃ ┣ 📜 product.entity.ts
+ ┃ ┃ ┣ 📜 product.module.ts
+ ┃ ┃ ┗ 📜 product.service.ts
   ┃ ┗ 📂 category
- ┃ ┃ ┣ 📜 category.controller.[js,ts]
- ┃ ┃ ┣ 📜 category.gateway.[js,ts]
- ┃ ┃ ┣ 📜 category.entity.[js,ts]
- ┃ ┃ ┣ 📜 category.module.[js,ts]
- ┃ ┃ ┗ 📜 category.service.[js,ts]
- ┃ ┗ 📜 main.module.[js,ts]
- ┣ 📜 [jsconfig,tsconfig].json
- ┣ 📜 main.[js,ts]
+ ┃ ┃ ┣ 📜 category.controller.ts
+ ┃ ┃ ┣ 📜 category.gateway.ts
+ ┃ ┃ ┣ 📜 category.entity.ts
+ ┃ ┃ ┣ 📜 category.module.ts
+ ┃ ┃ ┗ 📜 category.service.ts
+ ┃ ┗ 📜 main.module.ts
+ ┣ 📜 tsconfig.json
+ ┣ 📜 main.ts
  ┗ 📜 package.json
 ```
 
+</div>
+
+<div class="prefer-ecmascript prefer-commonjs">
+
+```:no-line-numbers
+📦 istanbul-project
+ ┣ 📂 src
+ ┃ ┗ 📂 product
+ ┃ ┃ ┣ 📜 product.controller.js
+ ┃ ┃ ┣ 📜 product.gateway.js
+ ┃ ┃ ┣ 📜 product.entity.js
+ ┃ ┃ ┣ 📜 product.module.js
+ ┃ ┃ ┗ 📜 product.service.js
+  ┃ ┗ 📂 category
+ ┃ ┃ ┣ 📜 category.controller.js
+ ┃ ┃ ┣ 📜 category.gateway.js
+ ┃ ┃ ┣ 📜 category.entity.js
+ ┃ ┃ ┣ 📜 category.module.js
+ ┃ ┃ ┗ 📜 category.service.js
+ ┃ ┗ 📜 main.module.js
+ ┣ 📜 jsconfig.json
+ ┣ 📜 main.js
+ ┗ 📜 package.json
+```
+
+</div>
+
 So what do these mean?
 
+<div class="prefer-typescript">
+
 - `src` is the source code folder.
-- `product` is the product folder.
-- `category` is the category folder.
-- `product.controller.[js,ts]` is the product controller. (for http listeners)
-- `product.gateway.[js,ts]` is the product gateway. (for websocket listeners)
-- `product.entity.[js,ts]` is the product entity. (for database tables)
-- `product.module.[js,ts]` is the product module.
-- `product.service.[js,ts]` is the product service. (for database services)
-- `category.controller.[js,ts]` is the category controller.
-- `category.gateway.[js,ts]` is the category gateway.
-- `category.entity.[js,ts]` is the category entity.
-- `category.module.[js,ts]` is the category module.
-- `category.service.[js,ts]` is the category service.
-- `main.module.[js,ts]` is the main module. (for the application modules registration)
-- `[jsconfig,tsconfig].json` is the configuration file. (for typescript or javascript)
-- `main.[js,ts]` is the main file. (for the application)
+- - `product` is the product folder.
+- - - `product.controller.ts` is the product controller. (for http listeners)
+- - - `product.gateway.ts` is the product gateway. (for websocket listeners)
+- - - `product.entity.ts` is the product entity. (for database tables)
+- - - `product.module.ts` is the product module.
+- - - `product.service.ts` is the product service. (for database services)
+- - `category` is the category folder.
+- - - `category.controller.ts` is the category controller.
+- - - `category.gateway.ts` is the category gateway.
+- - - `category.entity.ts` is the category entity.
+- - - `category.module.ts` is the category module.
+- - - `category.service.ts` is the category service.
+- - `main.module.ts` is the main module. (for the application modules registration)
+- `tsconfig.json` is the configuration file. (for typescript config)
+- `main.ts` is the main file. (for the application)
 - `package.json` is the package file.
+
+</div>
+
+<div class="prefer-ecmascript prefer-commonjs">
+
+- `src` is the source code folder.
+- - `product` is the product folder.
+- - - `product.controller.js` is the product controller. (for http listeners)
+- - - `product.gateway.js` is the product gateway. (for websocket listeners)
+- - - `product.entity.js` is the product entity. (for database tables)
+- - - `product.module.js` is the product module.
+- - - `product.service.js` is the product service. (for database services)
+- - `category` is the category folder.
+- - - `category.controller.js` is the category controller.
+- - - `category.gateway.js` is the category gateway.
+- - - `category.entity.js` is the category entity.
+- - - `category.module.js` is the category module.
+- - - `category.service.js` is the category service.
+- - `main.module.js` is the main module. (for the application modules registration)
+- `jsconfig.json` is the configuration file. (for javascript config)
+- `main.js` is the main file. (for the application)
+- `package.json` is the package file.
+
+</div>
 
 ## Create a Module
 

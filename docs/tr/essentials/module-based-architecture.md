@@ -28,46 +28,103 @@ Modül tabanlı mimari ile programınızdaki her nesne bir modül haline gelir. 
 
 Öncelikle bu konuda tamamen özgürsünüz. Ancak emin değilseniz, Önerilen klasör yapısını kullanabilirsiniz.
 
-```:satırsız sayılar
+<div class="prefer-typescript">
+
+```:no-line-numbers
 📦 istanbul-projesi
  ┣ 📂 src
  ┃ ┗ 📂 product
- ┃ ┃ ┣ 📜 product.controller.[js,ts]
- ┃ ┃ ┣ 📜 product.gateway.[js,ts]
- ┃ ┃ ┣ 📜 product.entity.[js,ts]
- ┃ ┃ ┣ 📜 product.module.[js,ts]
- ┃ ┃ ┗ 📜 product.service.[js,ts]
+ ┃ ┃ ┣ 📜 product.controller.ts
+ ┃ ┃ ┣ 📜 product.gateway.ts
+ ┃ ┃ ┣ 📜 product.entity.ts
+ ┃ ┃ ┣ 📜 product.module.ts
+ ┃ ┃ ┗ 📜 product.service.ts
   ┃ ┗ 📂 category
- ┃ ┃ ┣ 📜 category.controller.[js,ts]
- ┃ ┃ ┣ 📜 category.gateway.[js,ts]
- ┃ ┃ ┣ 📜 category.entity.[js,ts]
- ┃ ┃ ┣ 📜 category.module.[js,ts]
- ┃ ┃ ┗ 📜 category.service.[js,ts]
- ┃ ┗ 📜 main.module.[js,ts]
- ┣ 📜 [jsconfig,tsconfig].json
- ┣ 📜 main.[js,ts]
+ ┃ ┃ ┣ 📜 category.controller.ts
+ ┃ ┃ ┣ 📜 category.gateway.ts
+ ┃ ┃ ┣ 📜 category.entity.ts
+ ┃ ┃ ┣ 📜 category.module.ts
+ ┃ ┃ ┗ 📜 category.service.ts
+ ┃ ┗ 📜 main.module.ts
+ ┣ 📜 tsconfig.json
+ ┣ 📜 main.ts
  ┗ 📜 package.json
 ```
 
+</div>
+
+<div class="prefer-ecmascript prefer-commonjs">
+
+```:no-line-numbers
+📦 istanbul-projesi
+ ┣ 📂 src
+ ┃ ┗ 📂 product
+ ┃ ┃ ┣ 📜 product.controller.js
+ ┃ ┃ ┣ 📜 product.gateway.js
+ ┃ ┃ ┣ 📜 product.entity.js
+ ┃ ┃ ┣ 📜 product.module.js
+ ┃ ┃ ┗ 📜 product.service.js
+  ┃ ┗ 📂 category
+ ┃ ┃ ┣ 📜 category.controller.js
+ ┃ ┃ ┣ 📜 category.gateway.js
+ ┃ ┃ ┣ 📜 category.entity.js
+ ┃ ┃ ┣ 📜 category.module.js
+ ┃ ┃ ┗ 📜 category.service.js
+ ┃ ┗ 📜 main.module.js
+ ┣ 📜 jsconfig.json
+ ┣ 📜 main.js
+ ┗ 📜 package.json
+```
+
+</div>
+
+
 Peki bunlar ne anlama geliyor?
 
+
+<div class="prefer-typescript">
+
 - `src` kaynak kod klasörüdür.
-- `product` ürün klasörüdür.
-- `category` kategori klasörüdür.
-- `product.controller.[js,ts]` ürün kontrolörüdür. (http dinleyicileri için)
-- `product.gateway.[js,ts]` ürün ağ geçididir. (websocket dinleyicileri için)
-- `product.entity.[js,ts]` ürün varlığıdır. (veritabanı tabloları için)
-- `product.module.[js,ts]` ürün modülüdür.
-- `product.service.[js,ts]` ürün hizmetidir. (veritabanı hizmetleri için)
-- `category.controller.[js,ts]` kategori kontrolörüdür.
-- `category.gateway.[js,ts]` kategori ağ geçididir.
-- `category.entity.[js,ts]` kategori varlığıdır.
-- `category.module.[js,ts]` kategori modülüdür.
-- `category.service.[js,ts]` kategori hizmetidir.
-- `main.module.[js,ts]` ana modüldür. (uygulama modülleri kaydı için)
-- `[jsconfig,tsconfig].json` yapılandırma dosyasıdır. (daktilo yazısı veya javascript için)
-- `main.[js,ts]` ana dosyadır. (uygulama için)
+- - `product` ürün klasörüdür.
+- - - `product.controller.ts` ürün kontrolörüdür. (http dinleyicileri için)
+- - - `product.gateway.ts` ürün ağ geçididir. (websocket dinleyicileri için)
+- - - `product.entity.ts` ürün varlığıdır. (veritabanı tabloları için)
+- - - `product.module.ts` ürün modülüdür.
+- - - `product.service.ts` ürün hizmetidir. (veritabanı hizmetleri için)
+- - `category` kategori klasörüdür.
+- - - `category.controller.ts` kategori kontrolörüdür.
+- - - `category.gateway.ts` kategori ağ geçididir.
+- - - `category.entity.ts` kategori varlığıdır.
+- - - `category.module.ts` kategori modülüdür.
+- - - `category.service.ts` kategori hizmetidir.
+- - `main.module.ts` ana modüldür. (uygulama modülleri kaydı için)
+- `tsconfig.json` yapılandırma dosyasıdır. (typescript için)
+- `main.ts` ana dosyadır. (uygulama için)
 - `package.json` paket dosyasıdır.
+
+</div>
+
+<div class="prefer-ecmascript prefer-commonjs">
+
+- `src` kaynak kod klasörüdür.
+- - `product` ürün klasörüdür.
+- - - `product.controller.js` ürün kontrolörüdür. (http dinleyicileri için)
+- - - `product.gateway.js` ürün ağ geçididir. (websocket dinleyicileri için)
+- - - `product.entity.js` ürün varlığıdır. (veritabanı tabloları için)
+- - - `product.module.js` ürün modülüdür.
+- - - `product.service.js` ürün hizmetidir. (veritabanı hizmetleri için)
+- - `category` kategori klasörüdür.
+- - - `category.controller.js` kategori kontrolörüdür.
+- - - `category.gateway.js` kategori ağ geçididir.
+- - - `category.entity.js` kategori varlığıdır.
+- - - `category.module.js` kategori modülüdür.
+- - - `category.service.js` kategori hizmetidir.
+- - `main.module.js` ana modüldür. (uygulama modülleri kaydı için)
+- `jsconfig.json` yapılandırma dosyasıdır. (javascript için)
+- `main.js` ana dosyadır. (uygulama için)
+- `package.json` paket dosyasıdır.
+
+</div>
 
 ## Bir Modül Oluştur
 
