@@ -54,6 +54,51 @@ export default defineUserConfig({
     ],
     ["meta", { name: "msapplication-TileColor", content: "#48cae4" }],
     ["meta", { name: "theme-color", content: "#1a1a1f" }],
+    [
+      "meta",
+      {
+        name: "keywords",
+        content:
+          "NodeJS, TypeScript, Http, Websocket, JavaScript, Istanbul, Framework, nodejs framework, istanbul framework, istanbul javascript",
+      },
+    ],
+    [
+      "meta",
+      {
+        property: "og:title",
+        content:
+          "IstanbulJS | The Progressive, Flexible and Friendly Full Stack NodeJS Framework",
+      },
+    ],
+    [
+      "meta",
+      {
+        name: "twitter:title",
+        content:
+          "IstanbulJS | The Progressive, Flexible and Friendly Full Stack NodeJS Framework",
+      },
+    ],
+    [
+      "meta",
+      {
+        name: "twitter:site",
+        content: "@istanbuljs",
+      },
+    ],
+    [
+      "meta",
+      {
+        name: "twitter:card",
+        content: "summary",
+      },
+    ],
+    [
+      "meta",
+      {
+        name: "twitter:image",
+        content: "https://istanbuljs.com/logo.png",
+      },
+    ],
   ],
   locales: {
     "/": {
