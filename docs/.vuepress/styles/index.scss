@@ -170,3 +170,26 @@ html.syntax-preference-commonjs:not(.syntax-preference-typescript, .syntax-prefe
     display: block;
   }
 }
+
+@media screen and (max-width: 419px) {
+  .code-group {
+    width: 90%;
+    margin-inline: auto;
+  }
+  .sponsor-container {
+    .sponsor-item {
+      width: 100% !important;
+      margin-right: 0 !important;
+      margin-left: 0 !important;
+    }
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 420px) {
+  .sponsor-container {
+    .sponsor-item {
+      width: 48% !important;
+      margin-right: 0 !important;
+      margin-left: 0 !important;
+    }
+  }
+}

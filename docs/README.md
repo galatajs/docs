@@ -25,7 +25,7 @@ features:
   - title: Easy to Use
     details: Istanbul quickly creates module, service, controller and gateway with its cli package and allows you to focus on your work.
   
-footer: <p class="license">Released under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>.</p><p class="copyright">Copyright © 2022 Sami Salih İbrahimbaş</p>
+footer: <p class="license">Released under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>.</p><p class="copyright">Copyright © 2022 <a href="https://github.com/ssibrahimbas" target="_blank">Sami Salih İbrahimbaş</a></p>
 footerHtml: true
 layout: IstanbulLayout
 ---
@@ -38,7 +38,7 @@ Life is too short to think about everything. We thought for you once, now the re
 
 <div class="prefer-typescript">
 
-```typescript:
+```typescript:no-line-numbers
 import { createApp, App } from "@istanbul/app"
 import { createHttpServer, createRouter, Request, Response, NextFunction } from "@istanbul/http"
 
@@ -58,7 +58,7 @@ app.start()
 
 <div class="prefer-ecmascript">
 
-```javascript:
+```javascript:no-line-numbers
 import { createApp } from "@istanbul/app"
 import { createHttpServer, createRouter } from "@istanbul/http"
 
@@ -78,7 +78,7 @@ app.start()
 
 <div class="prefer-commonjs">
 
-```javascript:
+```javascript:no-line-numbers
 const { createApp } = require("@istanbul/app")
 const { createHttpServer, createRouter } = require("@istanbul/http")
 
@@ -101,7 +101,7 @@ app.start()
 
 <div class="prefer-typescript">
 
-```typescript:
+```typescript:no-line-numbers
 import { createApp, App } from "@istanbul/app"
 import { createWsApp, WsApp, Socket, Request, Response } from "@istanbul/ws"
 
@@ -121,7 +121,7 @@ app.start()
 
 <div class="prefer-ecmascript">
 
-```javascript:
+```javascript:no-line-numbers
 import { createApp } from "@istanbul/app"
 import { createWsApp } from "@istanbul/ws"
 
@@ -141,7 +141,7 @@ app.start()
 
 <div class="prefer-commonjs">
 
-```javascript:
+```javascript:no-line-numbers
 const { createApp } = require("@istanbul/app")
 const { createWsApp } = require("@istanbul/ws")
 
@@ -176,10 +176,3 @@ Although the codes are short, there is that much you can do. Start <a href="/int
   <span class="question-mark">?</span>
 </div>
 </div>
-
-
-<script setup>
-const abc = () => {
-  console.log('abc')
-}
-</script>
