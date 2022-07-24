@@ -40,6 +40,10 @@ export const EnglishSidebar: SidebarConfig = [
         link: "/packages/websocket",
       },
       {
+        text: "TypeORM",
+        link: "/packages/typeorm",
+      },
+      {
         text: "Events",
         link: "/packages/events",
       },

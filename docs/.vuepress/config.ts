@@ -59,7 +59,7 @@ export default defineUserConfig({
       {
         name: "keywords",
         content:
-          "NodeJS, TypeScript, Http, Websocket, JavaScript, Istanbul, Framework, nodejs framework, istanbul framework, istanbul javascript",
+          "NodeJS, TypeScript, Http, istanbuljs, Websocket, JavaScript, Istanbul, Framework, nodejs framework, istanbul framework, istanbul javascript",
       },
     ],
     [

@@ -40,6 +40,10 @@ export const TurkishSidebar: SidebarConfig = [
         link: "/tr/packages/websocket",
       },
       {
+        text: "TypeORM",
+        link: "/packages/typeorm",
+      },
+      {
         text: "Events",
         link: "/tr/packages/events",
       },
