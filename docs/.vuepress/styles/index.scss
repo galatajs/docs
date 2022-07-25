@@ -199,4 +199,7 @@ html.syntax-preference-commonjs:not(.syntax-preference-typescript, .syntax-prefe
     margin-inline: auto;
     overflow: hidden;
   }
+  .homepage .theme-default-content div[class*="language-"] {
+    margin-inline: -1.5rem !important;
+  }
 }
