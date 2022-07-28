@@ -40,10 +40,6 @@ export const TurkishSidebar: SidebarConfig = [
         link: "/tr/packages/websocket",
       },
       {
-        text: "TypeORM",
-        link: "/packages/typeorm",
-      },
-      {
         text: "Events",
         link: "/tr/packages/events",
       },
@@ -62,6 +58,20 @@ export const TurkishSidebar: SidebarConfig = [
       {
         text: "Rules",
         link: "/tr/packages/rules",
+      },
+    ],
+  },
+  {
+    collapsible: false,
+    text: "Veritabanları",
+    children: [
+      {
+        text: "MongoDB",
+        link: "/databases/mongo",
+      },
+      {
+        text: "TypeORM",
+        link: "/databases/typeorm",
       },
     ],
   },

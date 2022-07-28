@@ -40,10 +40,6 @@ export const EnglishSidebar: SidebarConfig = [
         link: "/packages/websocket",
       },
       {
-        text: "TypeORM",
-        link: "/packages/typeorm",
-      },
-      {
         text: "Events",
         link: "/packages/events",
       },
@@ -62,6 +58,20 @@ export const EnglishSidebar: SidebarConfig = [
       {
         text: "Rules",
         link: "/packages/rules",
+      },
+    ],
+  },
+  {
+    collapsible: false,
+    text: "Databases",
+    children: [
+      {
+        text: "MongoDB",
+        link: "/databases/mongo",
+      },
+      {
+        text: "TypeORM",
+        link: "/databases/typeorm",
       },
     ],
   },
