@@ -204,3 +204,13 @@ html.syntax-preference-commonjs:not(.syntax-preference-typescript, .syntax-prefe
     margin-inline: -1.5rem !important;
   }
 }
+
+.be-sponsor-footer {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}

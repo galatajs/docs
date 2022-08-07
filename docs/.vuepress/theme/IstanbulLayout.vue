@@ -39,6 +39,17 @@ const buttons = [
         <i :class="button.icon"></i>
       </a>
     </template>
+    <template #page-bottom>
+      <div class="be-sponsor-footer">
+        <iframe
+          src="https://github.com/sponsors/istanbulnode/card"
+          title="Sponsor istanbulnode"
+          height="225"
+          width="100%"
+          style="border: 0"
+        ></iframe>
+      </div>
+    </template>
   </ParentLayout>
 </template>
 
