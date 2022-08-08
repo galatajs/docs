@@ -199,4 +199,194 @@ However, there is one very important point: The registration order. The registra
 
 ## Provide Something
 
+We have connected the auth module to the user module. Now let's dive a little further into the user module.
+
+Let the User module be using a repository as it will perform operations on the database. With the `UserRepository`, we can perform database operations of the User. `UserService` should contains functions that will be used by the `authModule` or `UserController`, such as `createUser` and `getUserById`.
+
+In this case `UserService` should use `UserRepository` for database operations. So `UserService` is first degree dependent on `UserRepository`. Therefore, `UserRepository` (depending element) must be written before in the provider list.
+
+Here is the example for the `userModule`
+
+<div class="prefer-typescript">
+
+```typescript:no-line-numbers
+// /src/modules/user/user.module.ts
+import { createModule, Module } from "@istanbul/app"
+import { UserRepository } from "./user.repository"
+import { UserService } from "./user.service"
+
+export const userModule : Module = createModule("user", {
+    providers: [ UserRepository, UserService ],
+})
+```
+
+</div>
+
+
+<div class="prefer-ecmascript">
+
+```javascript:no-line-numbers
+// /src/modules/user/user.module.js
+import { createModule } from "@istanbul/app"
+import { UserRepository } from "./user.repository"
+import { UserService } from "./user.service"
+
+export const userModule = createModule("user", {
+    providers: [ UserRepository, UserService ],
+})
+```
+
+</div>
+
+
+<div class="prefer-commonjs">
+
+```javascript:no-line-numbers
+// /src/modules/user/user.module.js
+const { createModule } = require("@istanbul/app")
+const { UserRepository } = require("./user.repository")
+const { UserService } = require("./user.service")
+
+const userModule = createModule("user", {
+    providers: [ UserRepository, UserService ],
+})
+
+module.exports = { userModule }
+```
+
+</div>
+
+That's it!
+
 ## Export Something
+
+So far, we've talked about how to import a module, how to provide classes in a module, and the importance of their order.
+
+But there is something that we missed and will solve right here. This is that we can only use the exported values of the modules we import.
+
+For example, we imported the `userModule` to the `authModule` above.  We have exposed `UserService` as a provider in the `userModule`. However, despite all this, `UserService` cannot be used within the `authModule`. Because we haven't exported it in the `userModule` yet.
+
+In short, if we want a provider to be used in an external module, we must export it.
+
+Let's update the `UserModule` as follows
+
+<div class="prefer-typescript">
+
+```typescript:no-line-numbers
+// /src/modules/user/user.module.ts
+import { createModule, Module } from "@istanbul/app"
+import { UserRepository } from "./user.repository"
+import { UserService } from "./user.service"
+
+export const userModule : Module = createModule("user", {
+    providers: [ UserRepository, UserService ],
+    exports: [ UserService ],
+})
+```
+
+</div>
+
+
+<div class="prefer-ecmascript">
+
+```javascript:no-line-numbers
+// /src/modules/user/user.module.js
+import { createModule } from "@istanbul/app"
+import { UserRepository } from "./user.repository"
+import { UserService } from "./user.service"
+
+export const userModule = createModule("user", {
+    providers: [ UserRepository, UserService ],
+    exports: [ UserService ],
+})
+```
+
+</div>
+
+
+<div class="prefer-commonjs">
+
+```javascript:no-line-numbers
+// /src/modules/user/user.module.js
+const { createModule } = require("@istanbul/app")
+const { UserRepository } = require("./user.repository")
+const { UserService } = require("./user.service")
+
+const userModule = createModule("user", {
+    providers: [ UserRepository, UserService ],
+    exports: [ UserService ],
+})
+
+module.exports = { userModule }
+```
+
+</div>
+
+Now `authModule` can easily use `UserService`.
+
+Here is an example for `authModule`
+
+<div class="prefer-typescript">
+
+```typescript:no-line-numbers
+// /src/auth/auth.service.ts
+import { UserService } from "../user/user.service"
+
+export class AuthService {
+    private userService : UserService;
+
+    constructor(params : {userService : UserService}) {
+        this.userService = params.userService;
+    }
+
+    async createUser(createUserDto: CreateUserDto) : Promise<UserModel | null> {
+        return this.userService.createUser(createUserDto);
+    }
+}
+```
+
+</div>
+
+
+<div class="prefer-ecmascript">
+
+```javascript:no-line-numbers
+// /src/auth/auth.service.js
+export class AuthService {
+    #userService;
+
+    constructor({userService}) {
+        this.#userService = userService;
+    }
+
+    async createUser(createUserDto) {
+        return this.userService.createUser(createUserDto);
+    }
+}
+```
+
+</div>
+
+
+<div class="prefer-commonjs">
+
+```javascript:no-line-numbers
+// /src/auth/auth.service.js
+class AuthService {
+    #userService;
+
+    constructor({userService}) {
+        this.#userService = userService;
+    }
+
+    async createUser(createUserDto) {
+        return this.userService.createUser(createUserDto);
+    }
+}
+
+module.exports = { AuthService }
+```
+
+</div>
+
+and provide it in the `authModule`.
