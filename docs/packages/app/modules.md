@@ -360,7 +360,7 @@ export class AuthService {
     }
 
     async createUser(createUserDto) {
-        return this.userService.createUser(createUserDto);
+        return this.#userService.createUser(createUserDto);
     }
 }
 ```
@@ -380,7 +380,7 @@ class AuthService {
     }
 
     async createUser(createUserDto) {
-        return this.userService.createUser(createUserDto);
+        return this.#userService.createUser(createUserDto);
     }
 }
 
