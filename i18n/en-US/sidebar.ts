@@ -26,6 +26,20 @@ export const EnglishSidebar: SidebarConfig = [
       {
         text: "Application",
         link: "/packages/app",
+        children: [
+          {
+            text: "Modules",
+            link: "/packages/app/modules",
+          },
+          {
+            text: "Plugins",
+            link: "/packages/app/plugins",
+          },
+          {
+            text: "App Methods",
+            link: "/packages/app/app-methods",
+          },
+        ],
       },
       {
         text: "Create Istanbul",

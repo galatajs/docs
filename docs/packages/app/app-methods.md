@@ -5,7 +5,7 @@ contributors: true
 layout: IstanbulLayout
 ---
 
-# Modules
+# App Methods
 
 ::: tip Documentation Not Yet Completed
 
