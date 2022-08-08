@@ -11,10 +11,10 @@ This package is the main package of <span class="text-primary">IstanbulJS</span>
 
 What does the app package include?
 
-- [``Modules``](/package/app/modules)
-- [``Lifecycle Hooks``](/essentials/lifecycle)
-- [``Plugins``](/packages/app/plugins)
-- [``App Methods``](/packages/app/app-methods)
+- [``Modules``](./modules)
+- [``Lifecycle Hooks``](../../essentials/lifecycle)
+- [``Plugins``](./plugins)
+- [``App Methods``](./app-methods)
 
 for example an <span class="text-primary">IstanbulJS</span> application is started like this
 
