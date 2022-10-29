@@ -18,6 +18,11 @@ const buttons = [
     url: "https://www.linkedin.com/company/istanbuljs",
     icon: "bx bxl-linkedin",
   },
+  {
+    ariaLabel: "Discord",
+    url: "https://discord.gg/WBunXka69h",
+    icon: "bx bxl-discord-alt",
+  },
 ];
 </script>
 
