@@ -134,4 +134,8 @@ export const EnglishSidebar: SidebarConfig = [
     text: "Support Us",
     link: "/other/support-us",
   },
+  {
+    text: "Contributing",
+    link: "/other/contributing",
+  },
 ];
