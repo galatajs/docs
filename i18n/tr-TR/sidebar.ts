@@ -120,4 +120,8 @@ export const TurkishSidebar: SidebarConfig = [
     text: "Bizi Destekle",
     link: "/tr/other/support-us",
   },
+  {
+    text: "Katkıda Bulun",
+    link: "/tr/other/contrubuting",
+  },
 ];
