@@ -3,14 +3,14 @@ lang: tr-TR
 footer: false
 lastUpdated: true
 contributors: true
-layout: IstanbulLayout
+layout: GalataLayout
 ---
 
 # İstanbul'un Yaşam Döngüsü
 
 Dünyadaki hemen hemen her şeyin bir yaşam döngüsü vardır. Örneğin insan doğar, yaşar ve ölür. Yemek yapıyoruz, yiyoruz ve temizliyoruz. Bütün bunlar kendi içinde yaşam döngüsüdür.
 
-<span class="text-primary">IstanbulJS</span> bir NodeJS Framework'ü olduğundan, olaylar sunucu tarafı olaylar olacaktır. `onAppStarted` ve `onAppFinished` gibi. Ayrıca <span class="text-primary">IstanbulJS</span>, bazı NodeJS sinyallerini de kullanmanıza olanak tanır.
+<span class="text-primary">GalataJS</span> bir NodeJS Framework'ü olduğundan, olaylar sunucu tarafı olaylar olacaktır. `onAppStarted` ve `onAppFinished` gibi. Ayrıca <span class="text-primary">GalataJS</span>, bazı NodeJS sinyallerini de kullanmanıza olanak tanır.
 
 ## NodeJS Sinyalleri Nedir?
 
@@ -18,14 +18,14 @@ Uygulamanız çeşitli nedenlerle kullanıcı veya sistem tarafından kapatılab
 
 ## İstanbul'un Yaşam Döngüsü Sırası
 
-<span class="text-primary">IstanbulJS</span>, modül tabanlı mimari kullandığınızda yaşam döngüsünü kullanmanıza olanak tanır. Modüldeki tüm sağlayıcılar (isterlerse) bu kancaları kullanabilirler. Aşağıda bunun şeması verilmiştir ve daha aşağıda her biri ayrı ayrı açıklanmıştır.
+<span class="text-primary">GalataJS</span>, modül tabanlı mimari kullandığınızda yaşam döngüsünü kullanmanıza olanak tanır. Modüldeki tüm sağlayıcılar (isterlerse) bu kancaları kullanabilirler. Aşağıda bunun şeması verilmiştir ve daha aşağıda her biri ayrı ayrı açıklanmıştır.
 
 <div class="light-content">
-    <img src="/img/diagrams/istanbuljs-lifecycle-light.png" />
+    <img src="/img/diagrams/galatajs-lifecycle-light.png" />
 </div>
 
 <div class="dark-content">
-<img src="/img/diagrams/istanbuljs-lifecycle-dark.png" />
+<img src="/img/diagrams/galatajs-lifecycle-dark.png" />
 </div>
 
 ### appCreated
@@ -34,7 +34,7 @@ Uygulamanız çeşitli nedenlerle kullanıcı veya sistem tarafından kapatılab
 
 ### onModuleInstalled
 
-Modül kurulur kurulmaz çalışır. Bu, `onAppStarted`'dan biraz önce çalışır ve modülünüz bir veritabanı modülüyse, burada diğer modüllerin ve uygulamanın oluşturulmasını geciktirebilirsiniz. <span class="text-primary">IstanbulJS</span>, modülün yüklenmesini tamamen bekleyecektir.
+Modül kurulur kurulmaz çalışır. Bu, `onAppStarted`'dan biraz önce çalışır ve modülünüz bir veritabanı modülüyse, burada diğer modüllerin ve uygulamanın oluşturulmasını geciktirebilirsiniz. <span class="text-primary">GalataJS</span>, modülün yüklenmesini tamamen bekleyecektir.
 
 İşte bir örnek
 
@@ -43,7 +43,7 @@ Modül kurulur kurulmaz çalışır. Bu, `onAppStarted`'dan biraz önce çalış
 TypeScript kullandığınız için, kancaların arabirimlerini uygulamanız önerilir.
 
 ```typescript:no-line-numbers
-import { onModuleInstalled } from "@istanbul/app";
+import { onModuleInstalled } from "@galatajs/app";
 
 export class SomeProvider implements onModuleInstalled {
 
@@ -65,7 +65,7 @@ Bu sınıfı sağlayıcı olarak bir modüle geçirmeniz gerekiyor.
 örneğin aşağıdaki gibi bir modülünüz var
 
 ```typescript:no-line-numbers
-import { createModule, Module } from "@istanbul/app";
+import { createModule, Module } from "@galatajs/app";
 import { productModule } from "../product/product.module";
 
 export const categoryModule : Module = createModule("category", {
@@ -89,7 +89,7 @@ Dahası
 
 ```typescript:no-line-numbers
 // providerA.ts
-import { onModuleInstalled } from "@istanbul/app";
+import { onModuleInstalled } from "@galatajs/app";
 import { ProductService } from "../product/product.service";
 
 export class ProviderA implements onModuleInstalled {
@@ -102,7 +102,7 @@ export class ProviderA implements onModuleInstalled {
 
 ```typescript:no-line-numbers
 // providerB.ts
-import { onModuleInstalled } from "@istanbul/app";
+import { onModuleInstalled } from "@galatajs/app";
 import { ProductService } from "../product/product.service";
 import { ProviderA } from "./providerA"
 
@@ -116,7 +116,7 @@ export class ProviderB implements onModuleInstalled {
 
 ```typescript:no-line-numbers
 // providerC.ts
-import { onModuleInstalled } from "@istanbul/app";
+import { onModuleInstalled } from "@galatajs/app";
 import { ProductService } from "../product/product.service";
 import { ProviderA } from "./providerA"
 import { ProviderB } from "./providerB"
@@ -155,7 +155,7 @@ Bu sınıfı sağlayıcı olarak bir modüle geçirmeniz gerekiyor.
 örneğin aşağıdaki gibi bir modülünüz var
 
 ```javascript:no-line-numbers
-import { createModule } from "@istanbul/app";
+import { createModule } from "@galatajs/app";
 import { productModule } from "../product/product.module";
 
 export const categoryModule = createModule("category", {
@@ -235,7 +235,7 @@ Bu sınıfı sağlayıcı olarak bir modüle geçirmeniz gerekiyor.
 örneğin aşağıdaki gibi bir modülünüz var
 
 ```javascript:no-line-numbers
-const { createModule } = require("@istanbul/app")
+const { createModule } = require("@galatajs/app")
 const { productModule } = require("../product/product.module")
 
 const categoryModule = createModule("category", {
@@ -314,7 +314,7 @@ Uygulama başlatıldığında ve tüm modüller kurulduğunda çalışır.
 TypeScript kullandığınız için, kancaların arabirimlerini uygulamanız önerilir.
 
 ```typescript:no-line-numbers
-import { OnAppStarted } from "@istanbul/app"
+import { OnAppStarted } from "@galatajs/app"
 
 export class SomeProvider implements OnAppStarted {
 
@@ -368,7 +368,7 @@ Uygulama, sistem veya kullanıcı tarafından kapatıldığında ve `app.close()
 TypeScript kullandığınız için, kancaların arabirimlerini uygulamanız önerilir.
 
 ```typescript:no-line-numbers
-import { OnAppFinished } from "@istanbul/app"
+import { OnAppFinished } from "@galatajs/app"
 
 export class SomeProvider implements OnAppFinished {
 

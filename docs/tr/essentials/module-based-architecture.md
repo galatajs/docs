@@ -3,7 +3,7 @@ lang: tr-TR
 footer: false
 lastUpdated: true
 contributors: true
-layout: IstanbulLayout
+layout: GalataLayout
 ---
 
 # Modül Tabanlı Mimari
@@ -18,11 +18,11 @@ layout: IstanbulLayout
 
 Modül Tabanlı Mimari (MTM), bir programın işlevselliğini bağımsız bileşenlere ayırmak için modülleri kullanan bir yazılım mimarisidir. Modüller, bir program oluşturmak için kullanılabilecek bağımsız işlevsellik parçalarıdır.
 
-<span class="text-primary">IstanbulJS</span>, orta ve büyük ölçekli uygulamalar için nesne yönelimli programlamayı şiddetle tavsiye eder. Ancak işiniz sadece request listener oluşturmaksa size çok daha sade bir altyapı sağlar. Modül Tabanlı Mimari kullanmak istemiyorsanız bir sonraki adıma geçebilirsiniz.
+<span class="text-primary">GalataJS</span>, orta ve büyük ölçekli uygulamalar için nesne yönelimli programlamayı şiddetle tavsiye eder. Ancak işiniz sadece request listener oluşturmaksa size çok daha sade bir altyapı sağlar. Modül Tabanlı Mimari kullanmak istemiyorsanız bir sonraki adıma geçebilirsiniz.
 
 Modül tabanlı mimari ile programınızdaki her nesne bir modül haline gelir. Tıpkı [`veritabanı normalleştirmesi`](https://en.wikipedia.org/wiki/Database_normalization) gibi. Ürün bir nesnedir ve bir modülü olmalıdır. Kategori bir nesnedir ve bir modülü olmalıdır. Bu, programlarınızı daha sürdürülebilir, okunabilir ve esnek hale getirir.
 
-<span class="text-primary">IstanbulJS</span>'in en önemli özelliği esnek ve aşamalı bir çerçeve olmasıdır. ve bunu modül tabanlı mimariye borçluyuz. Çünkü çerçeveyi geliştirirken bu felsefeyi kullandık.
+<span class="text-primary">GalataJS</span>'in en önemli özelliği esnek ve aşamalı bir çerçeve olmasıdır. ve bunu modül tabanlı mimariye borçluyuz. Çünkü çerçeveyi geliştirirken bu felsefeyi kullandık.
 
 ## Önerilen Klasör Yapısı
 
@@ -31,7 +31,7 @@ Modül tabanlı mimari ile programınızdaki her nesne bir modül haline gelir. 
 <div class="prefer-typescript">
 
 ```:no-line-numbers
-📦 istanbul-projesi
+📦 galatajs-projesi
  ┣ 📂 src
  ┃ ┗ 📂 product
  ┃ ┃ ┣ 📜 product.controller.ts
@@ -56,7 +56,7 @@ Modül tabanlı mimari ile programınızdaki her nesne bir modül haline gelir. 
 <div class="prefer-ecmascript prefer-commonjs">
 
 ```:no-line-numbers
-📦 istanbul-projesi
+📦 galatajs-projesi
  ┣ 📂 src
  ┃ ┗ 📂 product
  ┃ ┃ ┣ 📜 product.controller.js
@@ -133,7 +133,7 @@ Bir modül oluşturmak için aşağıdaki gibi bir kod yazmanız gerekecek. Bunl
 <div class="prefer-typescript">
 
 ```typescript:no-line-numbers
-import { createModule, Module } from "@istanbul/app"
+import { createModule, Module } from "@galatajs/app"
 import { ProductService } from "./product.service"
 
 export const productModule : Module = createModule("product", {
@@ -147,7 +147,7 @@ export const productModule : Module = createModule("product", {
 <div class="prefer-ecmascript">
 
 ```javascript:no-line-numbers
-import { createModule } from "@istanbul/app"
+import { createModule } from "@galatajs/app"
 import { ProductService } from "./product.service"
 
 export const productModule = createModule("product", {
@@ -161,7 +161,7 @@ export const productModule = createModule("product", {
 <div class="prefer-commonjs">
 
 ```javascript:no-line-numbers
-const { createModule } = require("@istanbul/app")
+const { createModule } = require("@galatajs/app")
 const { ProductService } = require("./product.service")
 
 const productModule = createModule("product", {
@@ -189,7 +189,7 @@ Modüller arasındaki ilişkiyi anlamak için `category.module` dosyamız muhtem
 <div class="prefer-typescript">
 
 ```typescript:no-line-numbers
-import { createModule, Module } from "@istanbul/app"
+import { createModule, Module } from "@galatajs/app"
 import { CategoryService } from "./category.service"
 import { CategoryController } from "./category.controller"
 import { productModule } from "../product/product.module"
@@ -205,7 +205,7 @@ export const categoryModule : Module = createModule("category", {
 <div class="prefer-ecmascript">
 
 ```javascript:no-line-numbers
-import { createModule } from "@istanbul/app"
+import { createModule } from "@galatajs/app"
 import { CategoryService } from "./category.service"
 import { CategoryController } from "./category.controller"
 import { productModule } from "../product/product.module"
@@ -221,7 +221,7 @@ export const categoryModule = createModule("category", {
 <div class="prefer-commonjs">
 
 ```javascript:no-line-numbers
-const { createModule } = require("@istanbul/app")
+const { createModule } = require("@galatajs/app")
 const { CategoryService } = require("./category.service")
 const { CategoryController } = require("./category.controller")
 const { productModule } = require("../product/product.module")
@@ -238,7 +238,7 @@ module.exports = {
 
 </div>
 
-Ve son olarak, modül tabanlı mimaride bir ana modüle ihtiyacımız var. Bunun nedeni, <span class="text-primary">IstanbulJS</span>'in modüller arasında parçadan bütüne bir ilişki kurmasıdır.
+Ve son olarak, modül tabanlı mimaride bir ana modüle ihtiyacımız var. Bunun nedeni, <span class="text-primary">GalataJS</span>'in modüller arasında parçadan bütüne bir ilişki kurmasıdır.
 
 ::: warning Uyarı!
 
@@ -250,7 +250,7 @@ Buradaki import sırası önemlidir. Öncelikle diğer modüllerde kullanılan m
 <div class="prefer-typescript">
 
 ```typescript:no-line-numbers
-import { createModule, Module } from "@istanbul/app"
+import { createModule, Module } from "@galatajs/app"
 import { productModule } from "./product/product.module"
 import { categoryModule } from "./category/category.module"
 
@@ -265,7 +265,7 @@ export const mainModule : Module = createModule("main", {
 <div class="prefer-ecmascript">
 
 ```javascript:no-line-numbers
-import { createModule } from "@istanbul/app"
+import { createModule } from "@galatajs/app"
 import { productModule } from "./product/product.module"
 import { categoryModule } from "./category/category.module"
 
@@ -280,7 +280,7 @@ export const mainModule = createModule("main", {
 <div class="prefer-commonjs">
 
 ```javascript:no-line-numbers
-const { createModule } = require("@istanbul/app")
+const { createModule } = require("@galatajs/app")
 const { productModule } = require("./product/product.module")
 const { categoryModule } = require("./category/category.module")
 
@@ -296,12 +296,12 @@ module.exports = {
 
 Ve kök dizindeki ana dosyamız şöyle görünecek.
 
-`createApp` fonksiyonu, isteğe bağlı bir `mainModule` alır. `createApp` işlevine bir modül sağlarsanız, <span class="text-primary">IstanbulJS</span>, modül tabanlı bir mimari kullanıyormuşsunuz gibi davranır.
+`createApp` fonksiyonu, isteğe bağlı bir `mainModule` alır. `createApp` işlevine bir modül sağlarsanız, <span class="text-primary">GalataJS</span>, modül tabanlı bir mimari kullanıyormuşsunuz gibi davranır.
 
 <div class="prefer-typescript">
 
 ```typescript:no-line-numbers
-import { createApp, App } from "@istanbul/app"
+import { createApp, App } from "@galatajs/app"
 import { mainModule } from "./src/main.module"
 
 const app : App = createApp(mainModule);
@@ -314,7 +314,7 @@ app.start();
 <div class="prefer-ecmascript">
 
 ```javascript:no-line-numbers
-import { createApp } from "@istanbul/app"
+import { createApp } from "@galatajs/app"
 import { mainModule } from "./src/main.module"
 
 const app = createApp(mainModule);
@@ -327,7 +327,7 @@ app.start();
 <div class="prefer-commonjs">
 
 ```javascript:no-line-numbers
-const { createApp } = require("@istanbul/app")
+const { createApp } = require("@galatajs/app")
 const { mainModule } = require("./src/main.module")
 
 const app = createApp(mainModule);

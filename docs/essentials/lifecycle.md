@@ -2,29 +2,29 @@
 footer: false
 lastUpdated: true
 contributors: true
-layout: IstanbulLayout
+layout: GalataLayout
 ---
 
-# Istanbul's Lifecycle
+# GalataJS's Lifecycle
 
 Almost everything on Earth has a lifecycle. For example, human is born, lives and dies. We cook, eat and clean. All these are in themselves the lifecycle.
 
-Since <span class="text-primary">IstanbulJS</span> is a NodeJS Framework, the events will be server-side events. Like `onAppStarted` and `onAppFinished`. Also <span class="text-primary">IstanbulJS</span> allows you to use some NodeJS signals as well.
+Since <span class="text-primary">GalataJS</span> is a NodeJS Framework, the events will be server-side events. Like `onAppStarted` and `onAppFinished`. Also <span class="text-primary">GalataJS</span> allows you to use some NodeJS signals as well.
 
 ## What Is NodeJS Signals?
 
 Your application may be closed by the user or the system for various reasons. NodeJS manages these operations with signals and various signals give you various information. For more information, [please visit here](https://nodejs.org/api/process.html#process_signal_events).
 
-## Istanbul's Lifecycle Sequence
+## GalataJS's Lifecycle Sequence
 
-<span class="text-primary">IstanbulJS</span> allows you to use lifecycle when you use module-based architecture. All providers in the module can use these hooks (if they want). Below is schematic of this, and further below, each is described individually.
+<span class="text-primary">GalataJS</span> allows you to use lifecycle when you use module-based architecture. All providers in the module can use these hooks (if they want). Below is schematic of this, and further below, each is described individually.
 
 <div class="light-content">
-    <img src="/img/diagrams/istanbuljs-lifecycle-light.png" />
+    <img src="/img/diagrams/galatajs-lifecycle-light.png" />
 </div>
 
 <div class="dark-content">
-<img src="/img/diagrams/istanbuljs-lifecycle-dark.png" />
+<img src="/img/diagrams/galatajs-lifecycle-dark.png" />
 </div>
 
 ### appCreated
@@ -33,7 +33,7 @@ The `createApp` function is executed as soon as it is called and is not very usa
 
 ### onModuleInstalled
 
-The module runs as soon as it is installed. This runs a little before `onAppStarted` and if your module is a database module you can delay the creation of other modules and app here. <span class="text-primary">IstanbulJS</span> will fully wait for the module to load.
+The module runs as soon as it is installed. This runs a little before `onAppStarted` and if your module is a database module you can delay the creation of other modules and app here. <span class="text-primary">GalataJS</span> will fully wait for the module to load.
 
 Here is an example
 
@@ -42,7 +42,7 @@ Here is an example
 Since you are using TypeScript, it is recommended to implement the hooks' interfaces.
 
 ```typescript:no-line-numbers
-import { onModuleInstalled } from "@istanbul/app";
+import { onModuleInstalled } from "@galatajs/app";
 
 export class SomeProvider implements onModuleInstalled {
 
@@ -64,7 +64,7 @@ a beautify of `onModuleInstalled`; is that the current module sends its provider
 for example you have a module like below
 
 ```typescript:no-line-numbers
-import { createModule, Module } from "@istanbul/app";
+import { createModule, Module } from "@galatajs/app";
 import { productModule } from "../product/product.module";
 
 export const categoryModule : Module = createModule("category", {
@@ -88,7 +88,7 @@ More
 
 ```typescript:no-line-numbers
 // providerA.ts
-import { onModuleInstalled } from "@istanbul/app";
+import { onModuleInstalled } from "@galatajs/app";
 import { ProductService } from "../product/product.service";
 
 export class ProviderA implements onModuleInstalled {
@@ -101,7 +101,7 @@ export class ProviderA implements onModuleInstalled {
 
 ```typescript:no-line-numbers
 // providerB.ts
-import { onModuleInstalled } from "@istanbul/app";
+import { onModuleInstalled } from "@galatajs/app";
 import { ProductService } from "../product/product.service";
 import { ProviderA } from "./providerA"
 
@@ -115,7 +115,7 @@ export class ProviderB implements onModuleInstalled {
 
 ```typescript:no-line-numbers
 // providerC.ts
-import { onModuleInstalled } from "@istanbul/app";
+import { onModuleInstalled } from "@galatajs/app";
 import { ProductService } from "../product/product.service";
 import { ProviderA } from "./providerA"
 import { ProviderB } from "./providerB"
@@ -155,7 +155,7 @@ a beautify of `onModuleInstalled`; is that the current module sends its provider
 for example you have a module like below
 
 ```javascript:no-line-numbers
-import { createModule } from "@istanbul/app";
+import { createModule } from "@galatajs/app";
 import { productModule } from "../product/product.module";
 
 export const categoryModule = createModule("category", {
@@ -235,7 +235,7 @@ a beautify of `onModuleInstalled`; is that the current module sends its provider
 for example you have a module like below
 
 ```javascript:no-line-numbers
-const { createModule } = require("@istanbul/app")
+const { createModule } = require("@galatajs/app")
 const { productModule } = require("../product/product.module")
 
 const categoryModule = createModule("category", {
@@ -313,7 +313,7 @@ Example Usage
 Since you are using TypeScript, it is recommended to implement the hooks' interfaces.
     
 ```typescript:no-line-numbers
-import { OnAppStarted } from "@istanbul/app"
+import { OnAppStarted } from "@galatajs/app"
 
 export class SomeProvider implements OnAppStarted {
 
@@ -367,7 +367,7 @@ Example Usage
 Since you are using TypeScript, it is recommended to implement the hooks' interfaces.
     
 ```typescript:no-line-numbers
-import { OnAppFinished } from "@istanbul/app"
+import { OnAppFinished } from "@galatajs/app"
 
 export class SomeProvider implements OnAppFinished {
 

@@ -10,7 +10,7 @@ import { TurkishNavbar } from "../../i18n/tr-TR/navbar";
 
 export default defineUserConfig({
   lang: "en-US",
-  title: "IstanbulJS",
+  title: "GalataJS",
   description:
     "The Progressive, Flexible and Friendly Full Stack NodeJS Framework",
   head: [
@@ -59,7 +59,7 @@ export default defineUserConfig({
       {
         name: "keywords",
         content:
-          "NodeJS, TypeScript, Http, istanbuljs, Websocket, JavaScript, Istanbul, Framework, nodejs framework, istanbul framework, istanbul javascript",
+          "NodeJS, TypeScript, Http, galatajs, Websocket, JavaScript, GalataJS, Framework, nodejs framework, galatajs framework, galatajs javascript",
       },
     ],
     [
@@ -67,7 +67,7 @@ export default defineUserConfig({
       {
         property: "og:title",
         content:
-          "IstanbulJS | The Progressive, Flexible and Friendly Full Stack NodeJS Framework",
+          "GalataJS | The Progressive, Flexible and Friendly Full Stack NodeJS Framework",
       },
     ],
     [
@@ -95,30 +95,30 @@ export default defineUserConfig({
       "meta",
       {
         property: "og:image",
-        content: "https://istanbuljs.org/logo.png",
+        content: "https://galatajs.org/logo.png",
       },
     ],
     [
       "meta",
       {
         property: "og:url",
-        content: "https://istanbuljs.org/",
+        content: "https://galatajs.org/",
       },
     ],
-    ["meta", { property: "og:site_name", content: "IstanbulJS" }],
+    ["meta", { property: "og:site_name", content: "GalataJS" }],
     [
       "meta",
       {
         property: "twitter:title",
         content:
-          "IstanbulJS | The Progressive, Flexible and Friendly Full Stack NodeJS Framework",
+          "GalataJS | The Progressive, Flexible and Friendly Full Stack NodeJS Framework",
       },
     ],
     [
       "meta",
       {
         property: "twitter:site",
-        content: "@istanbuljs",
+        content: "@galatajs",
       },
     ],
     [
@@ -132,7 +132,7 @@ export default defineUserConfig({
       "meta",
       {
         property: "twitter:image:src",
-        content: "https://istanbuljs.org/logo.png",
+        content: "https://galatajs.org/logo.png",
       },
     ],
     [

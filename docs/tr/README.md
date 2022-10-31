@@ -3,13 +3,13 @@ home: true
 pageClass: homepage
 heroImage: /img/framework-logo.png
 heroText: null
-title: IstanbulJS - İlerici, Esnek ve Kullanıcı Dostu Tam Yığın NodeJS Çerçevesi
+title: GalataJS - İlerici, Esnek ve Kullanıcı Dostu Tam Yığın NodeJS Çerçevesi
 actions:
   - text: Dokümantasyon
     link: /tr/introduction/
     type: primary
   - text: Kaynak Kodu
-    link: https://github.com/istanbulnode
+    link: https://github.com/galatajs
     type: secondary
 features:
   - title: İlerici
@@ -19,14 +19,14 @@ features:
   - title: Kullanıcı Dostu
     details: İstanbul uzaylılar tarafından değil, geliştiriciler tarafından geliştirildi. Bu nedenle ihtiyacınız olabilecek her şeye ulaşmak daha kolay ve zahmetsiz.
   - title: İstediğiniz Sözdizimi
-    details: Istanbul, TypeScript ile yazılmış ve JavaScript'e çevrildi. Bu nedenle CommonJS, EcmaScript ve TypeScript kullanabilirsiniz.
+    details: GalataJS, TypeScript ile yazılmış ve JavaScript'e çevrildi. Bu nedenle CommonJS, EcmaScript ve TypeScript kullanabilirsiniz.
   - title: Tüm Alanlarınızda
     details: Bir banka, cli, sohbet veya blog olsun, istediğiniz her şeyi geliştirin. İstanbul işinizi kolaylaştıracak bir altyapıya sahip!
   - title: Kolay Kullanım
-    details: Istanbul, cli paketi ile hızlı olarak modül, servis, controller ve gateway oluşturabilir ve sizin işinize odaklanmanızı sağlar.
+    details: GalataJS, cli paketi ile hızlı olarak modül, servis, controller ve gateway oluşturabilir ve sizin işinize odaklanmanızı sağlar.
 footer: <p class="license"><a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a> altında yayınlandı.</p><p class="copyright">Tüm hakları saklıdır. © 2022 Sami Salih İbrahimbaş</p>
 footerHtml: true
-layout: IstanbulLayout
+layout: GalataLayout
 ---
 
 Hayat her şeyi düşünmek için çok kısa. Bir zamanlar sizin için düşündük, şimdi gerisi aşağıdaki kodlar kadar zahmetsiz!
@@ -37,15 +37,15 @@ Hayat her şeyi düşünmek için çok kısa. Bir zamanlar sizin için düşünd
 <div class="prefer-typescript">
 
 ```typescript:
-import { createApp, App } from "@istanbul/app"
-import { createHttpServer, createRouter, Request, Response, NextFunction } from "@istanbul/http"
+import { createApp, App } from "@galatajs/app"
+import { createHttpServer, createRouter, Request, Response, NextFunction } from "@galatajs/http"
 
 const app : App = createApp()
 app.register(createHttpServer())
 
 const router = createRouter()
 router.get("view", (req : Request, res : Response, next : NextFunction) => {
-    res.success("IstanbulJS'e Hoş Geldin!")
+    res.success("GalataJS'e Hoş Geldin!")
 })
 
 app.start()
@@ -57,15 +57,15 @@ app.start()
 <div class="prefer-ecmascript">
 
 ```javascript:
-import { createApp } from "@istanbul/app"
-import { createHttpServer, createRouter } from "@istanbul/http"
+import { createApp } from "@galatajs/app"
+import { createHttpServer, createRouter } from "@galatajs/http"
 
 const app = createApp()
 app.register(createHttpServer())
 
 const router = createRouter()
 router.get("view", (req, res, next) => {
-    res.success("IstanbulJS'e Hoş Geldin!")
+    res.success("GalataJS'e Hoş Geldin!")
 })
 
 app.start()
@@ -77,15 +77,15 @@ app.start()
 <div class="prefer-commonjs">
 
 ```javascript:
-const { createApp } = require("@istanbul/app")
-const { createHttpServer, createRouter } = require("@istanbul/http")
+const { createApp } = require("@galatajs/app")
+const { createHttpServer, createRouter } = require("@galatajs/http")
 
 const app = createApp()
 app.register(createHttpServer())
 
 const router = createRouter()
 router.get("view", (req, res, next) => {
-    res.success("IstanbulJS'e Hoş Geldin!")
+    res.success("GalataJS'e Hoş Geldin!")
 })
 
 app.start()
@@ -103,15 +103,15 @@ app.start()
 <div class="prefer-typescript">
 
 ```typescript:
-import { createApp, App } from "@istanbul/app"
-import { createWsApp, WsApp, Socket, Request, Response } from "@istanbul/ws"
+import { createApp, App } from "@galatajs/app"
+import { createWsApp, WsApp, Socket, Request, Response } from "@galatajs/ws"
 
 const app : App = createApp()
 const ws : WsApp = createWsApp()
 app.register(ws)
 
 ws.listen("view", (socket : Socket, req : Request, res : Response) => {
-    res.reply("IstanbulJS'e Hoş Geldin!")
+    res.reply("GalataJS'e Hoş Geldin!")
 })
 
 app.start()
@@ -123,15 +123,15 @@ app.start()
 <div class="prefer-ecmascript">
 
 ```javascript:
-import { createApp } from "@istanbul/app"
-import { createWsApp } from "@istanbul/ws"
+import { createApp } from "@galatajs/app"
+import { createWsApp } from "@galatajs/ws"
 
 const app = createApp()
 const ws = createWsApp()
 app.register(ws)
 
 ws.listen("view", (socket, req, res) => {
-    res.reply("IstanbulJS'e Hoş Geldin!")
+    res.reply("GalataJS'e Hoş Geldin!")
 })
 
 app.start()
@@ -143,15 +143,15 @@ app.start()
 <div class="prefer-commonjs">
 
 ```javascript:
-const { createApp } = require("@istanbul/app")
-const { createWsApp } = require("@istanbul/ws")
+const { createApp } = require("@galatajs/app")
+const { createWsApp } = require("@galatajs/ws")
 
 const app = createApp()
 const ws = createWsApp()
 app.register(ws)
 
 ws.listen("view", (socket, req, res) => {
-    res.reply("IstanbulJS'e Hoş Geldin!")
+    res.reply("GalataJS'e Hoş Geldin!")
 })
 
 app.start()

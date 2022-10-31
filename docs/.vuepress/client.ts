@@ -1,6 +1,6 @@
 import { defineClientConfig } from "@vuepress/client";
 // @ts-ignore
-import IstanbulLayout from "./theme/IstanbulLayout.vue";
+import GalataLayout from "./theme/GalataLayout.vue";
 import { App, ref } from "vue";
 
 const calculateClassName = (key: string): string => `syntax-preference-${key}`;
@@ -53,7 +53,7 @@ const useUserJavaScriptModulePreference = (app: App) => {
 
 export default defineClientConfig({
   enhance({ app, router, siteData }) {
-    app.component("IstanbulLayout", IstanbulLayout);
+    app.component("GalataLayout", GalataLayout);
     useUserJavaScriptModulePreference(app);
   },
   setup() {},

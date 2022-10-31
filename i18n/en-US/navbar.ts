@@ -9,7 +9,7 @@ export const EnglishNavbar: NavbarConfig = [
     text: "About",
     children: [
       {
-        text: "About Istanbul",
+        text: "About GalataJS",
         link: "/about/",
       },
       {

@@ -2,7 +2,7 @@
 footer: false
 lastUpdated: true
 contributors: true
-layout: IstanbulLayout
+layout: GalataLayout
 ---
 
 # Module Based Architecture
@@ -17,11 +17,11 @@ layout: IstanbulLayout
 
 Module Based Architecture (MBA) is a software architecture that uses modules to separate the functionality of a program into independent components. Modules are independent pieces of functionality that can be used to build a program. 
 
-<span class="text-primary">IstanbulJS</span> strongly recommends object-oriented programming for medium and large scale applications. However, If your job is to just create a request listener, it provides you with a much softer infrastructure. If you do not want to use module-based architecture, you can proceed to the next step.
+<span class="text-primary">GalataJS</span> strongly recommends object-oriented programming for medium and large scale applications. However, If your job is to just create a request listener, it provides you with a much softer infrastructure. If you do not want to use module-based architecture, you can proceed to the next step.
 
 With module-based architecture, each object in your program becomes a module. Just like [`database normalization`](https://en.wikipedia.org/wiki/Database_normalization). Product is an object and must be have a module. Category is an object and must have a module. This makes your programs more maintainable, readable, and flexible.
 
-The most important features of <span class="text-primary">IstanbulJS</span> are that it is a flexible and progressive framework. and we owe this to module-based architecture. Because we used this philosophy while developing the framework.
+The most important features of <span class="text-primary">GalataJS</span> are that it is a flexible and progressive framework. and we owe this to module-based architecture. Because we used this philosophy while developing the framework.
 
 ## Recommended Folder Structure
 
@@ -30,7 +30,7 @@ First of all, you are completely free in this regard. But if you are not sure, y
 <div class="prefer-typescript">
 
 ```:no-line-numbers
-📦 istanbul-project
+📦 galatajs-project
  ┣ 📂 src
  ┃ ┗ 📂 product
  ┃ ┃ ┣ 📜 product.controller.ts
@@ -55,7 +55,7 @@ First of all, you are completely free in this regard. But if you are not sure, y
 <div class="prefer-ecmascript prefer-commonjs">
 
 ```:no-line-numbers
-📦 istanbul-project
+📦 galatajs-project
  ┣ 📂 src
  ┃ ┗ 📂 product
  ┃ ┃ ┣ 📜 product.controller.js
@@ -130,7 +130,7 @@ To create a module you will need to write code like the one below. We'II explain
 <div class="prefer-typescript">
 
 ```typescript:no-line-numbers
-import { createModule, Module } from "@istanbul/app"
+import { createModule, Module } from "@galatajs/app"
 import { ProductService } from "./product.service"
 
 export const productModule : Module = createModule("product", {
@@ -144,7 +144,7 @@ export const productModule : Module = createModule("product", {
 <div class="prefer-ecmascript">
 
 ```javascript:no-line-numbers
-import { createModule } from "@istanbul/app"
+import { createModule } from "@galatajs/app"
 import { ProductService } from "./product.service"
 
 export const productModule = createModule("product", {
@@ -158,7 +158,7 @@ export const productModule = createModule("product", {
 <div class="prefer-commonjs">
 
 ```javascript:no-line-numbers
-const { createModule } = require("@istanbul/app")
+const { createModule } = require("@galatajs/app")
 const { ProductService } = require("./product.service")
 
 const productModule = createModule("product", {
@@ -186,7 +186,7 @@ The order of providers's is important. Here, if the `CategoryService` file is us
 <div class="prefer-typescript">
 
 ```typescript:no-line-numbers
-import { createModule, Module } from "@istanbul/app"
+import { createModule, Module } from "@galatajs/app"
 import { CategoryService } from "./category.service"
 import { CategoryController } from "./category.controller"
 import { productModule } from "../product/product.module"
@@ -202,7 +202,7 @@ export const categoryModule : Module = createModule("category", {
 <div class="prefer-ecmascript">
 
 ```javascript:no-line-numbers
-import { createModule } from "@istanbul/app"
+import { createModule } from "@galatajs/app"
 import { CategoryService } from "./category.service"
 import { CategoryController } from "./category.controller"
 import { productModule } from "../product/product.module"
@@ -218,7 +218,7 @@ export const categoryModule = createModule("category", {
 <div class="prefer-commonjs">
 
 ```javascript:no-line-numbers
-const { createModule } = require("@istanbul/app")
+const { createModule } = require("@galatajs/app")
 const { CategoryService } = require("./category.service")
 const { CategoryController } = require("./category.controller")
 const { productModule } = require("../product/product.module")
@@ -236,7 +236,7 @@ module.exports = {
 </div>
 
 
-And finally, we need to have a main module in module-based architecture. This is because <span class="text-primary">IstanbulJS</span> establishes a part-to-whole relationship between modules.
+And finally, we need to have a main module in module-based architecture. This is because <span class="text-primary">GalataJS</span> establishes a part-to-whole relationship between modules.
 
 ::: warning Warning!
 
@@ -248,7 +248,7 @@ The import order here is important. First, the modules used in other modules sho
 <div class="prefer-typescript">
 
 ```typescript:no-line-numbers
-import { createModule, Module } from "@istanbul/app"
+import { createModule, Module } from "@galatajs/app"
 import { productModule } from "./product/product.module"
 import { categoryModule } from "./category/category.module"
 
@@ -263,7 +263,7 @@ export const mainModule : Module = createModule("main", {
 <div class="prefer-ecmascript">
 
 ```javascript:no-line-numbers
-import { createModule } from "@istanbul/app"
+import { createModule } from "@galatajs/app"
 import { productModule } from "./product/product.module"
 import { categoryModule } from "./category/category.module"
 
@@ -278,7 +278,7 @@ export const mainModule = createModule("main", {
 <div class="prefer-commonjs">
 
 ```javascript:no-line-numbers
-const { createModule } = require("@istanbul/app")
+const { createModule } = require("@galatajs/app")
 const { productModule } = require("./product/product.module")
 const { categoryModule } = require("./category/category.module")
 
@@ -294,12 +294,12 @@ module.exports = {
 
 And our main file in the root directory will look like this. 
 
-The `createApp` function takes an optional `mainModule`. If you provide a module to the `createApp` function, <span class="text-primary">IstanbulJS</span> acts as if you are using a module-based architecture.
+The `createApp` function takes an optional `mainModule`. If you provide a module to the `createApp` function, <span class="text-primary">GalataJS</span> acts as if you are using a module-based architecture.
 
 <div class="prefer-typescript">
 
 ```typescript:no-line-numbers
-import { createApp, App } from "@istanbul/app"
+import { createApp, App } from "@galatajs/app"
 import { mainModule } from "./src/main.module"
 
 const app : App = createApp(mainModule);
@@ -312,7 +312,7 @@ app.start();
 <div class="prefer-ecmascript">
 
 ```javascript:no-line-numbers
-import { createApp } from "@istanbul/app"
+import { createApp } from "@galatajs/app"
 import { mainModule } from "./src/main.module"
 
 const app = createApp(mainModule);
@@ -325,7 +325,7 @@ app.start();
 <div class="prefer-commonjs">
 
 ```javascript:no-line-numbers
-const { createApp } = require("@istanbul/app")
+const { createApp } = require("@galatajs/app")
 const { mainModule } = require("./src/main.module")
 
 const app = createApp(mainModule);

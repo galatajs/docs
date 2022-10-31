@@ -1,6 +1,6 @@
 {
-  "name": "IstanbulJS",
-  "short_name": "IstanbulJS",
+  "name": "GalataJS",
+  "short_name": "GalataJS",
   "description": "The Progressive, Flexible and Friendly Full Stack NodeJS Framework",
   "start_url": "/index.html",
   "icons": [

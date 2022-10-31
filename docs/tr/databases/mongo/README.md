@@ -3,7 +3,7 @@ lang: tr-TR
 footer: false
 lastUpdated: true
 contributors: true
-layout: IstanbulLayout
+layout: GalataLayout
 ---
 
 # MongoDB Paketi
@@ -14,13 +14,13 @@ layout: IstanbulLayout
 
 :::
 
-<span class="text-primary">IstanbulJS</span> esnek ve ölçeklenebilir bir çerçevedir ve bu esnekliği veritabanı kısmında da korur. İstediğiniz veritabanını, istediğiniz veritabanı sürücüsünü ve istediğiniz nodejs orm paketini kullanabilirsiniz.
+<span class="text-primary">GalataJS</span> esnek ve ölçeklenebilir bir çerçevedir ve bu esnekliği veritabanı kısmında da korur. İstediğiniz veritabanını, istediğiniz veritabanı sürücüsünü ve istediğiniz nodejs orm paketini kullanabilirsiniz.
 
-Bu belgede, [MongoDB Node Driver](https://www.mongodb.com/docs/drivers/node/current/) ve <span class="text-primary">IstanbulJS</span>'yi modüller aracılığıyla birlikte nasıl kullanabileceğinizi açıklayacağız.
+Bu belgede, [MongoDB Node Driver](https://www.mongodb.com/docs/drivers/node/current/) ve <span class="text-primary">GalataJS</span>'yi modüller aracılığıyla birlikte nasıl kullanabileceğinizi açıklayacağız.
 
 ## Kurulum
 
-`istanbul/mongodb` paketi, mongodb sürücüsünü <span class="text-primary">IstanbulJS</span>'e entegre etmek için geliştirildi. Sürücüyü yerleşik olarak getirmez, harici olarak kurulması gerekir.
+`galatajs/mongodb` paketi, mongodb sürücüsünü <span class="text-primary">GalataJS</span>'e entegre etmek için geliştirildi. Sürücüyü yerleşik olarak getirmez, harici olarak kurulması gerekir.
 
 
 <code-group>
@@ -28,7 +28,7 @@ Bu belgede, [MongoDB Node Driver](https://www.mongodb.com/docs/drivers/node/curr
 <code-group-item title="NPM" active>
 
 ```bash:no-line-numbers
-npm install --save @istanbul/mongodb mongodb
+npm install --save @galatajs/mongodb mongodb
 ```
 
 </code-group-item>
@@ -36,7 +36,7 @@ npm install --save @istanbul/mongodb mongodb
 <code-group-item title="YARN">
 
 ```bash:no-line-numbers
-yarn add @istanbul/mongodb mongodb
+yarn add @galatajs/mongodb mongodb
 ```
 
 </code-group-item>
@@ -45,7 +45,7 @@ yarn add @istanbul/mongodb mongodb
 
 ## Kayıt
 
-<span class="text-primary">IstanbulJS</span> uygulamamıza MongoDB kullandığımızı söylememiz gerekiyor. Bu, modüller içindeki depoyu kullanabilmemiz, koleksiyonları modüllerimize dinamik olarak sağlayabilmemiz ve uygulama başlatıldığında veritabanına bağlanabilmemiz için gereklidir.
+<span class="text-primary">GalataJS</span> uygulamamıza MongoDB kullandığımızı söylememiz gerekiyor. Bu, modüller içindeki depoyu kullanabilmemiz, koleksiyonları modüllerimize dinamik olarak sağlayabilmemiz ve uygulama başlatıldığında veritabanına bağlanabilmemiz için gereklidir.
 
 Projemizin ana dosyasına aşağıdaki kodları yazmalıyız.
 
@@ -54,7 +54,7 @@ Projemizin ana dosyasına aşağıdaki kodları yazmalıyız.
 
 ```typescript:no-line-numbers
 // /main.ts
-import { createMongodbApp } from "@istanbul/mongodb";
+import { createMongodbApp } from "@galatajs/mongodb";
 
 app.register(
   createMongodbApp({
@@ -67,9 +67,9 @@ Tamamlandığında şu şekilde görünecektir
 
 ```typescript:no-line-numbers
 // /main.ts
-import { createApp, App } from "@istanbul/app";
-import { createHttpServer } from "@istanbul/http";
-import { createMongodbApp } from "@istanbul/mongodb";
+import { createApp, App } from "@galatajs/app";
+import { createHttpServer } from "@galatajs/http";
+import { createMongodbApp } from "@galatajs/mongodb";
 import { mainModule } from "./src/main.module";
 
 const app : App = createApp(mainModule);
@@ -90,7 +90,7 @@ app.start();
 
 ```javascript:no-line-numbers
 // /main.js
-import { createMongodbApp } from "@istanbul/mongodb";
+import { createMongodbApp } from "@galatajs/mongodb";
 
 app.register(
   createMongodbApp({
@@ -103,9 +103,9 @@ Tamamlandığında şu şekilde görünecektir
 
 ```javascript:no-line-numbers
 // /main.js
-import { createApp } from "@istanbul/app";
-import { createHttpServer } from "@istanbul/http";
-import { createMongodbApp } from "@istanbul/mongodb";
+import { createApp } from "@galatajs/app";
+import { createHttpServer } from "@galatajs/http";
+import { createMongodbApp } from "@galatajs/mongodb";
 import { mainModule } from "./src/main.module";
 
 const app = createApp(mainModule);
@@ -126,7 +126,7 @@ app.start();
 
 ```javascript:no-line-numbers
 // /main.js
-const { createMongodbApp } = require("@istanbul/mongodb");
+const { createMongodbApp } = require("@galatajs/mongodb");
 
 app.register(
   createMongodbApp({
@@ -139,9 +139,9 @@ Tamamlandığında şu şekilde görünecektir
 
 ```javascript:no-line-numbers
 // /main.js
-const { createApp } = require("@istanbul/app");
-const { createHttpServer } = require("@istanbul/http");
-const { createMongodbApp } = require("@istanbul/mongodb");
+const { createApp } = require("@galatajs/app");
+const { createHttpServer } = require("@galatajs/http");
+const { createMongodbApp } = require("@galatajs/mongodb");
 const { mainModule } = require("./src/main.module");
 
 const app = createApp(mainModule);
@@ -192,15 +192,15 @@ So unfortunately you cannot create a schema in projects where you use JavaScript
 
 ## Modül Kaydı
 
-MongoDB Koleksiyonlarımızı modüllerimizde kullanmak için onları kaydetmemiz gerekiyor. <span class="text-primary">IstanbulJS</span> sizin için gerekli bağımlılığı otomatik olarak sağlayacaktır.
+MongoDB Koleksiyonlarımızı modüllerimizde kullanmak için onları kaydetmemiz gerekiyor. <span class="text-primary">GalataJS</span> sizin için gerekli bağımlılığı otomatik olarak sağlayacaktır.
 
 `product.module` dosyamızı aşağıdaki gibi oluşturmalıyız.
 
 <div class="prefer-typescript">
 
 ```typescript:no-line-numbers
-import { createModule } from "@istanbul/app";
-import { registerCollection } from "@istanbul/mongodb";
+import { createModule } from "@galatajs/app";
+import { registerCollection } from "@galatajs/mongodb";
 
 export const productModule = createModule("product", {
   imports: [registerCollection("products")],
@@ -214,8 +214,8 @@ export const productModule = createModule("product", {
 <div class="prefer-ecmascript">
 
 ```javascript:no-line-numbers
-import { createModule } from "@istanbul/app";
-import { registerCollection } from "@istanbul/mongodb";
+import { createModule } from "@galatajs/app";
+import { registerCollection } from "@galatajs/mongodb";
 
 export const productModule = createModule("product", {
   imports: [registerCollection("products")],
@@ -228,8 +228,8 @@ export const productModule = createModule("product", {
 <div class="prefer-commonjs">
 
 ```javascript:no-line-numbers
-const { createModule } = require("@istanbul/app");
-const { registerCollection } = require("@istanbul/mongodb");
+const { createModule } = require("@galatajs/app");
+const { registerCollection } = require("@galatajs/mongodb");
 
 const productModule = createModule("product", {
   imports: [registerCollection("products")],
@@ -414,4 +414,4 @@ module.exports = {
 
 Bu kadar! Basit bir mongodb bağlantısı kurduk, bir koleksiyonun modülümüze nasıl entegre edileceğini öğrendik ve bu koleksiyon için bir servis dosyası yazdık.
 
-Gerçek hayatta bunu kontrolörlere bağlıyoruz. Ancak yazıyı uzatmamak adına burada anlatmayacağız. Bu makaledeki http paketiyle kullanılan örneğe bir örnek [burada bulunabilir](https://github.com/istanbulnode/app/tree/main/examples/02-mongodb).
+Gerçek hayatta bunu kontrolörlere bağlıyoruz. Ancak yazıyı uzatmamak adına burada anlatmayacağız. Bu makaledeki http paketiyle kullanılan örneğe bir örnek [burada bulunabilir](https://github.com/galatajs/app/tree/main/examples/02-mongodb).

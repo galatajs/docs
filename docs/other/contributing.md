@@ -2,18 +2,18 @@
 footer: false
 lastUpdated: true
 contributors: true
-layout: IstanbulLayout
+layout: GalataLayout
 ---
 
-# Contribute to Istanbul
+# Contribute to GalataJS
 
-Thank you for wanting to contribute to <span class="text-primary">IstanbulJS</span>!
+Thank you for wanting to contribute to <span class="text-primary">GalataJS</span>!
 
-You can follow the steps below to contribute to <span class="text-primary">IstanbulJS</span>.
+You can follow the steps below to contribute to <span class="text-primary">GalataJS</span>.
 
 ## Contents
 
-- [Contribute to Istanbul](#contribute-to-istanbul)
+- [Contribute to GalataJS](#contribute-to-galatajs)
   - [Contents](#contents)
   - [prerequisites](#prerequisites)
   - [Before Contribution Code](#before-contribution-code)

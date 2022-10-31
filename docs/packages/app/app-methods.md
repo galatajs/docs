@@ -2,7 +2,7 @@
 footer: false
 lastUpdated: true
 contributors: true
-layout: IstanbulLayout
+layout: GalataLayout
 ---
 
 # App Methods
@@ -13,7 +13,7 @@ layout: IstanbulLayout
 
 :::
 
-<span class="text-primary">IstanbulJS</span> already offers several functions for better usability and it is entirely up to you whether to use them or not.
+<span class="text-primary">GalataJS</span> already offers several functions for better usability and it is entirely up to you whether to use them or not.
 
 These are listed and explained under the following headings.
 

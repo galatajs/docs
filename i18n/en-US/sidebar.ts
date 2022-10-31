@@ -10,7 +10,7 @@ export const EnglishSidebar: SidebarConfig = [
     collapsible: false,
     children: [
       {
-        text: "Istanbul's Lifecycle",
+        text: "GalataJS's Lifecycle",
         link: "/essentials/lifecycle",
       },
       {
@@ -42,8 +42,8 @@ export const EnglishSidebar: SidebarConfig = [
         ],
       },
       {
-        text: "Create Istanbul",
-        link: "/packages/create-istanbul",
+        text: "Create GalataJS",
+        link: "/packages/create-galatajs",
       },
       {
         text: "Http",
@@ -94,8 +94,8 @@ export const EnglishSidebar: SidebarConfig = [
     text: "FAQ",
     children: [
       {
-        text: "Why Istanbul?",
-        link: "/faq/why-istanbul",
+        text: "Why GalataJS?",
+        link: "/faq/why-galatajs",
       },
       {
         text: "Passwordless Architecture",
@@ -127,7 +127,7 @@ export const EnglishSidebar: SidebarConfig = [
   },
   {
     collapsible: true,
-    text: "Discover Istanbul",
+    text: "Discover GalataJS",
     children: [],
   },
   {

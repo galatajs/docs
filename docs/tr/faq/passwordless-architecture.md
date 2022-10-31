@@ -3,7 +3,7 @@ lang: tr-TR
 footer: false
 lastUpdated: true
 contributors: true
-layout: IstanbulLayout
+layout: GalataLayout
 ---
 
 # Şifresiz Mimari

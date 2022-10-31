@@ -10,7 +10,7 @@ export const TurkishSidebar: SidebarConfig = [
     collapsible: false,
     children: [
       {
-        text: "İstanbul'un Yaşam Döngüsü",
+        text: "GalataJS'in Yaşam Döngüsü",
         link: "/tr/essentials/lifecycle",
       },
       {
@@ -28,8 +28,8 @@ export const TurkishSidebar: SidebarConfig = [
         link: "/tr/packages/app",
       },
       {
-        text: "Create Istanbul",
-        link: "/tr/packages/create-istanbul",
+        text: "Create GalataJS",
+        link: "/tr/packages/create-galatajs",
       },
       {
         text: "Http",
@@ -80,8 +80,8 @@ export const TurkishSidebar: SidebarConfig = [
     text: "SSS",
     children: [
       {
-        text: "Neden Istanbul?",
-        link: "/tr/faq/why-istanbul",
+        text: "Neden GalataJS?",
+        link: "/tr/faq/why-galatajs",
       },
       {
         text: "Şifresiz Mimari",
@@ -113,7 +113,7 @@ export const TurkishSidebar: SidebarConfig = [
   },
   {
     collapsible: true,
-    text: "Istanbul'u Keşfet",
+    text: "GalataJS Keşfet",
     children: [],
   },
   {

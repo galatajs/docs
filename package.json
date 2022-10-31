@@ -1,7 +1,7 @@
 {
-  "name": "istanbul-docs",
+  "name": "galatajs-docs",
   "version": "0.0.1",
-  "description": "documentation of istanbul framework",
+  "description": "documentation of galatajs framework",
   "main": "index.js",
   "author": "Sami Salih İBRAHİMBAŞ",
   "license": "MIT",

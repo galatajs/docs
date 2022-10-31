@@ -2,21 +2,21 @@
 footer: false
 lastUpdated: true
 contributors: true
-layout: IstanbulLayout
+layout: GalataLayout
 ---
 
-# Istanbul'a Katkıda Bulunun
+# GalataJS'a Katkıda Bulunun
 
-<span class="text-primary">IstanbulJS</span> için katkıda bulunmak istediğiniz için teşekkür ederiz!
+<span class="text-primary">GalataJS</span> için katkıda bulunmak istediğiniz için teşekkür ederiz!
 
-Aşağıdaki adımları izleyerek <span class="text-primary">IstanbulJS</span> için katkıda bulunabilirsiniz.
+Aşağıdaki adımları izleyerek <span class="text-primary">GalataJS</span> için katkıda bulunabilirsiniz.
 
 ## İçindekiler
 
 
 ## Contents
 
-- [Istanbul'a Katkıda Bulunun](#istanbula-katkıda-bulunun)
+- [GalataJS'a Katkıda Bulunun](#istanbula-katkıda-bulunun)
   - [İçindekiler](#i̇çindekiler)
   - [Contents](#contents)
   - [Ön Koşullar](#ön-koşullar)

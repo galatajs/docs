@@ -2,7 +2,7 @@
 footer: false
 lastUpdated: true
 contributors: true
-layout: IstanbulLayout
+layout: GalataLayout
 ---
 
 # Modules
@@ -16,7 +16,7 @@ layout: IstanbulLayout
 
 Modules allow you to develop applications with an object-oriented architecture and it is recommended to use module-based architecture.
 
-Everything is your app is treated as an object each is a module. For example, in an e-commerce application, products, categories and users are different objects. Just as you import them into different tables in the database, you can also process them through different modules in <span class="text-primary">IstanbulJS</span> modules.
+Everything is your app is treated as an object each is a module. For example, in an e-commerce application, products, categories and users are different objects. Just as you import them into different tables in the database, you can also process them through different modules in <span class="text-primary">GalataJS</span> modules.
 
 However, this only applies to medium-large projects. If you are doing a small demo it will be overkill.
 
@@ -28,7 +28,7 @@ To create a module, we will send our module name and necessary parameters to the
 
 ```typescript:no-line-numbers
 // /src/product/product.module
-import { createModule, Module } from "@istanbul/app"
+import { createModule, Module } from "@galatajs/app"
 
 export const productModule : Module = createModule("product", {
     imports: [ ],
@@ -44,7 +44,7 @@ export const productModule : Module = createModule("product", {
 
 ```javascript:no-line-numbers
 // /src/product/product.module
-import { createModule } from "@istanbul/app"
+import { createModule } from "@galatajs/app"
 
 export const productModule = createModule("product", {
     imports: [ ],
@@ -60,7 +60,7 @@ export const productModule = createModule("product", {
 
 ```javascript:no-line-numbers
 // /src/product/product.module
-const { createModule } = require("@istanbul/app")
+const { createModule } = require("@galatajs/app")
 
 const productModule = createModule("product", {
     imports: [ ],
@@ -82,7 +82,7 @@ module.exports = { productModule }
 
 ```typescript:no-line-numbers
 // /src/main.module
-import { createModule, Module } from "@istanbul/app"
+import { createModule, Module } from "@galatajs/app"
 import { productModule } from "./product/product.module"
 
 export const mainModule : Module = createModule("main", {
@@ -102,7 +102,7 @@ const app = createApp(mainModule) // this line is required
 
 ```javascript:no-line-numbers
 // /src/main.module
-import { createModule } from "@istanbul/app"
+import { createModule } from "@galatajs/app"
 import { productModule } from "./product/product.module"
 
 export const mainModule = createModule("main", {
@@ -122,7 +122,7 @@ const app = createApp(mainModule) // this line is required
 
 ```javascript:no-line-numbers
 // /src/main.module
-const { createModule } = require("@istanbul/app")
+const { createModule } = require("@galatajs/app")
 const { productModule } = require("./product/product.module")
 
 const mainModule = createModule("main", {
@@ -149,7 +149,7 @@ That's it
 
 ```typescript:no-line-numbers
 // /src/auth/auth.module
-import { createModule, Module } from "@istanbul/app"
+import { createModule, Module } from "@galatajs/app"
 import { userModule } from "../user/user.module"
 
 export const authModule : Module = createModule("auth", {
@@ -164,7 +164,7 @@ export const authModule : Module = createModule("auth", {
 
 ```javascript:no-line-numbers
 // /src/auth/auth.module
-import { createModule } from "@istanbul/app"
+import { createModule } from "@galatajs/app"
 import { userModule } from "../user/user.module"
 
 export const authModule = createModule("auth", {
@@ -179,7 +179,7 @@ export const authModule = createModule("auth", {
 
 ```javascript:no-line-numbers
 // /src/auth/auth.module
-const { createModule } = require("@istanbul/app")
+const { createModule } = require("@galatajs/app")
 const { userModule } = require("../user/user.module")
 
 const authModule = createModule("auth", {
@@ -211,7 +211,7 @@ Here is the example for the `userModule`
 
 ```typescript:no-line-numbers
 // /src/modules/user/user.module.ts
-import { createModule, Module } from "@istanbul/app"
+import { createModule, Module } from "@galatajs/app"
 import { UserRepository } from "./user.repository"
 import { UserService } from "./user.service"
 
@@ -227,7 +227,7 @@ export const userModule : Module = createModule("user", {
 
 ```javascript:no-line-numbers
 // /src/modules/user/user.module.js
-import { createModule } from "@istanbul/app"
+import { createModule } from "@galatajs/app"
 import { UserRepository } from "./user.repository"
 import { UserService } from "./user.service"
 
@@ -243,7 +243,7 @@ export const userModule = createModule("user", {
 
 ```javascript:no-line-numbers
 // /src/modules/user/user.module.js
-const { createModule } = require("@istanbul/app")
+const { createModule } = require("@galatajs/app")
 const { UserRepository } = require("./user.repository")
 const { UserService } = require("./user.service")
 
@@ -274,7 +274,7 @@ Let's update the `UserModule` as follows
 
 ```typescript:no-line-numbers
 // /src/modules/user/user.module.ts
-import { createModule, Module } from "@istanbul/app"
+import { createModule, Module } from "@galatajs/app"
 import { UserRepository } from "./user.repository"
 import { UserService } from "./user.service"
 
@@ -291,7 +291,7 @@ export const userModule : Module = createModule("user", {
 
 ```javascript:no-line-numbers
 // /src/modules/user/user.module.js
-import { createModule } from "@istanbul/app"
+import { createModule } from "@galatajs/app"
 import { UserRepository } from "./user.repository"
 import { UserService } from "./user.service"
 
@@ -308,7 +308,7 @@ export const userModule = createModule("user", {
 
 ```javascript:no-line-numbers
 // /src/modules/user/user.module.js
-const { createModule } = require("@istanbul/app")
+const { createModule } = require("@galatajs/app")
 const { UserRepository } = require("./user.repository")
 const { UserService } = require("./user.service")
 

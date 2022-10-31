@@ -2,7 +2,7 @@
 footer: false
 lastUpdated: true
 contributors: true
-layout: IstanbulLayout
+layout: GalataLayout
 ---
 
 # TypeORM Package
@@ -13,13 +13,13 @@ layout: IstanbulLayout
 
 :::
 
-<span class="text-primary">IstanbulJS</span> is a flexible and scalable framework and maintains this flexibility in the database part as well. You can use whatever database you want, the database driver you want, and the nodejs orm package you want.
+<span class="text-primary">GalataJS</span> is a flexible and scalable framework and maintains this flexibility in the database part as well. You can use whatever database you want, the database driver you want, and the nodejs orm package you want.
 
-In this document, we will explain how you can use [TypeORM](https://typeorm.io/) and <span class="text-primary">IstanbulJS</span> project together through modules.
+In this document, we will explain how you can use [TypeORM](https://typeorm.io/) and <span class="text-primary">GalataJS</span> project together through modules.
 
 ## Installation
 
-`istanbul/typeorm` is a package designed to use TypeORM features on the <span class="text-primary">IstanbulJS</span> project. This package contains the dependencies of TypeORM and TypeORM. Also you don't need to install TypeORM.
+`galatajs/typeorm` is a package designed to use TypeORM features on the <span class="text-primary">GalataJS</span> project. This package contains the dependencies of TypeORM and TypeORM. Also you don't need to install TypeORM.
 
 However, you must choose the database driver you will use. In our example we will use mysql and this is it. So we will use `mysql2` driver.
 
@@ -34,7 +34,7 @@ However, you must choose the database driver you will use. In our example we wil
 <code-group-item title="NPM" active>
 
 ```bash:no-line-numbers
-npm install --save @istanbul/typeorm mysql2
+npm install --save @galatajs/typeorm mysql2
 ```
 
 </code-group-item>
@@ -42,7 +42,7 @@ npm install --save @istanbul/typeorm mysql2
 <code-group-item title="YARN">
 
 ```bash:no-line-numbers
-yarn add @istanbul/typeorm mysql2
+yarn add @galatajs/typeorm mysql2
 ```
 
 </code-group-item>
@@ -51,7 +51,7 @@ yarn add @istanbul/typeorm mysql2
 
 ## Registration
 
-We need to tell our <span class="text-primary">IstanbulJS</span> application  that we are using TypeORM. This is necessary so that we can use the repository within the modules and connect to the database when the application is started.
+We need to tell our <span class="text-primary">GalataJS</span> application  that we are using TypeORM. This is necessary so that we can use the repository within the modules and connect to the database when the application is started.
 
 We should write the following codes in the main file of our project
 
@@ -59,7 +59,7 @@ We should write the following codes in the main file of our project
 
 ```typescript:no-line-numbers
 // /main.ts
-import { createTypeorm } from "@istanbul/typeorm";
+import { createTypeorm } from "@galatajs/typeorm";
 
 app.register(
   createTypeorm({
@@ -77,9 +77,9 @@ When complete, it will look like this
 
 ```typescript:no-line-numbers
 // /main.ts
-import { createApp, App } from "@istanbul/app";
-import { createHttpServer } from "@istanbul/http";
-import { createTypeorm } from "@istanbul/typeorm";
+import { createApp, App } from "@galatajs/app";
+import { createHttpServer } from "@galatajs/http";
+import { createTypeorm } from "@galatajs/typeorm";
 import { mainModule } from "./src/main.module";
 
 const app: App = createApp(mainModule);
@@ -105,7 +105,7 @@ app.start();
 
 ```javascript:no-line-numbers
 // /main.js
-import { createTypeorm } from "@istanbul/typeorm";
+import { createTypeorm } from "@galatajs/typeorm";
 
 app.register(
   createTypeorm({
@@ -123,9 +123,9 @@ When complete, it will look like this
 
 ```javascript:no-line-numbers
 // /main.js
-import { createApp } from "@istanbul/app";
-import { createHttpServer } from "@istanbul/http";
-import { createTypeorm } from "@istanbul/typeorm";
+import { createApp } from "@galatajs/app";
+import { createHttpServer } from "@galatajs/http";
+import { createTypeorm } from "@galatajs/typeorm";
 import { mainModule } from "./src/main.module";
 
 const app = createApp(mainModule);
@@ -151,7 +151,7 @@ app.start();
 
 ```javascript:no-line-numbers
 // /main.js
-const { createTypeorm } = require("@istanbul/typeorm");
+const { createTypeorm } = require("@galatajs/typeorm");
 
 app.register(
   createTypeorm({
@@ -169,9 +169,9 @@ When complete, it will look like this
 
 ```javascript:no-line-numbers
 // /main.js
-const { createApp } = require("@istanbul/app");
-const { createHttpServer } = require("@istanbul/http");
-const { createTypeorm } = require("@istanbul/typeorm");
+const { createApp } = require("@galatajs/app");
+const { createHttpServer } = require("@galatajs/http");
+const { createTypeorm } = require("@galatajs/typeorm");
 const { mainModule } = require("./src/main.module");
 
 const app = createApp(mainModule);
@@ -295,8 +295,8 @@ We should create our `product.module` file as follows
 <div class="prefer-typescript">
 
 ```typescript:no-line-numbers
-import { createModule, Module } from "@istanbul/app";
-import { registerEntity } from "@istanbul/typeorm";
+import { createModule, Module } from "@galatajs/app";
+import { registerEntity } from "@galatajs/typeorm";
 import { Product } from "./product.entity";
 
 export const productModule : Module = createModule("product", {
@@ -310,8 +310,8 @@ export const productModule : Module = createModule("product", {
 <div class="prefer-ecmascript">
 
 ```javascript:no-line-numbers
-import { createModule } from "@istanbul/app";
-import { registerEntity } from "@istanbul/typeorm";
+import { createModule } from "@galatajs/app";
+import { registerEntity } from "@galatajs/typeorm";
 import { Product } from "./product.entity";
 
 export const productModule = createModule("product", {
@@ -325,8 +325,8 @@ export const productModule = createModule("product", {
 <div class="prefer-commonjs">
 
 ```javascript:no-line-numbers
-const { createModule } = require("@istanbul/app");
-const { registerEntity } = require("@istanbul/typeorm");
+const { createModule } = require("@galatajs/app");
+const { registerEntity } = require("@galatajs/typeorm");
 const { Product } = require("./product.entity");
 
 const productModule = createModule("product", {
@@ -494,4 +494,4 @@ module.exports = {
 
 That's it! We made a simple mysql connection, created an entity and wrote a service file for this entity.
 
-In real life we also attribute this to controls. However, in order not to prolong the article, we will not describe it here. An example of the example in this article used with the http package can be [found here](https://github.com/istanbulnode/app/tree/main/examples/01-typeorm).
+In real life we also attribute this to controls. However, in order not to prolong the article, we will not describe it here. An example of the example in this article used with the http package can be [found here](https://github.com/galatajs/app/tree/main/examples/01-typeorm).

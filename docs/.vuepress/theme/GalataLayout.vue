@@ -5,17 +5,17 @@ import SyntaxPreferenceSwitch from "./SyntaxPreferenceSwitch.vue";
 const buttons = [
   {
     ariaLabel: "GitHub",
-    url: "https://www.github.com/istanbulnode/docs",
+    url: "https://www.github.com/galatajs/docs",
     icon: "bx bxl-github",
   },
   {
     ariaLabel: "Twitter",
-    url: "https://twitter.com/istanbuljs",
+    url: "https://twitter.com/galatajs",
     icon: "bx bxl-twitter",
   },
   {
     ariaLabel: "LinkedIn",
-    url: "https://www.linkedin.com/company/istanbuljs",
+    url: "https://www.linkedin.com/company/galatajs",
     icon: "bx bxl-linkedin",
   },
   {
@@ -47,8 +47,8 @@ const buttons = [
     <template #page-bottom>
       <div class="be-sponsor-footer">
         <iframe
-          src="https://github.com/sponsors/istanbulnode/card"
-          title="Sponsor istanbulnode"
+          src="https://github.com/sponsors/galatajs/card"
+          title="Sponsor galatajs"
           height="225"
           width="100%"
           style="border: 0"
