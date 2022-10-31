@@ -2,6 +2,7 @@
 footer: false
 lastUpdated: true
 contributors: true
+layout: GalataLayout
 ---
 
 # I18n Package

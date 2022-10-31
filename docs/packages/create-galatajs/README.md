@@ -2,9 +2,10 @@
 footer: false
 lastUpdated: true
 contributors: true
+layout: GalataLayout
 ---
 
-# App Package
+# Create-GalataJS Package
 
 ::: tip Documentation Not Yet Completed
 

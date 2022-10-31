@@ -2,9 +2,10 @@
 footer: false
 lastUpdated: true
 contributors: true
+layout: GalataLayout
 ---
 
-# Create-Istanbul Package
+# Plugins
 
 ::: tip Documentation Not Yet Completed
 

@@ -10,7 +10,7 @@ export const EnglishSidebar: SidebarConfig = [
     collapsible: false,
     children: [
       {
-        text: "Istanbul's Lifecycle",
+        text: "GalataJS's Lifecycle",
         link: "/essentials/lifecycle",
       },
       {
@@ -26,10 +26,24 @@ export const EnglishSidebar: SidebarConfig = [
       {
         text: "Application",
         link: "/packages/app",
+        children: [
+          {
+            text: "Modules",
+            link: "/packages/app/modules",
+          },
+          {
+            text: "Plugins",
+            link: "/packages/app/plugins",
+          },
+          {
+            text: "App Methods",
+            link: "/packages/app/app-methods",
+          },
+        ],
       },
       {
-        text: "Create Istanbul",
-        link: "/packages/create-istanbul",
+        text: "Create GalataJS",
+        link: "/packages/create-galatajs",
       },
       {
         text: "Http",
@@ -62,12 +76,26 @@ export const EnglishSidebar: SidebarConfig = [
     ],
   },
   {
+    collapsible: false,
+    text: "Databases",
+    children: [
+      {
+        text: "MongoDB",
+        link: "/databases/mongo",
+      },
+      {
+        text: "TypeORM",
+        link: "/databases/typeorm",
+      },
+    ],
+  },
+  {
     collapsible: true,
     text: "FAQ",
     children: [
       {
-        text: "Why Istanbul?",
-        link: "/faq/why-istanbul",
+        text: "Why GalataJS?",
+        link: "/faq/why-galatajs",
       },
       {
         text: "Passwordless Architecture",
@@ -99,11 +127,15 @@ export const EnglishSidebar: SidebarConfig = [
   },
   {
     collapsible: true,
-    text: "Discover Istanbul",
+    text: "Discover GalataJS",
     children: [],
   },
   {
     text: "Support Us",
     link: "/other/support-us",
+  },
+  {
+    text: "Contributing",
+    link: "/other/contributing",
   },
 ];

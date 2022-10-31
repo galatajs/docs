@@ -9,7 +9,7 @@ export const TurkishNavbar: NavbarConfig = [
     text: "Hakkında",
     children: [
       {
-        text: "Istanbul Hakkında",
+        text: "GalataJS Hakkında",
         link: "/tr/about/",
       },
       {

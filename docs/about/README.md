@@ -2,9 +2,10 @@
 footer: false
 lastUpdated: true
 contributors: true
+layout: GalataLayout
 ---
 
-# About Istanbul
+# About GalataJS
 
 ::: tip Documentation Not Yet Completed
 

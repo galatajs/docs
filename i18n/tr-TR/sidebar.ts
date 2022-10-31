@@ -10,15 +10,11 @@ export const TurkishSidebar: SidebarConfig = [
     collapsible: false,
     children: [
       {
-        text: "Bir Uygulama Oluştur",
-        link: "/tr/essentials/create-app",
-      },
-      {
-        text: "İstanbul'un Yaşam Döngüsü",
+        text: "GalataJS'in Yaşam Döngüsü",
         link: "/tr/essentials/lifecycle",
       },
       {
-        text: "Modül Bazlı Mimari",
+        text: "Modül Tabanlı Mimari",
         link: "/tr/essentials/module-based-architecture",
       },
     ],
@@ -32,8 +28,8 @@ export const TurkishSidebar: SidebarConfig = [
         link: "/tr/packages/app",
       },
       {
-        text: "Create Istanbul",
-        link: "/tr/packages/create-istanbul",
+        text: "Create GalataJS",
+        link: "/tr/packages/create-galatajs",
       },
       {
         text: "Http",
@@ -66,12 +62,26 @@ export const TurkishSidebar: SidebarConfig = [
     ],
   },
   {
+    collapsible: false,
+    text: "Veritabanları",
+    children: [
+      {
+        text: "MongoDB",
+        link: "/databases/mongo",
+      },
+      {
+        text: "TypeORM",
+        link: "/databases/typeorm",
+      },
+    ],
+  },
+  {
     collapsible: true,
     text: "SSS",
     children: [
       {
-        text: "Neden Istanbul?",
-        link: "/tr/faq/why-istanbul",
+        text: "Neden GalataJS?",
+        link: "/tr/faq/why-galatajs",
       },
       {
         text: "Şifresiz Mimari",
@@ -103,11 +113,15 @@ export const TurkishSidebar: SidebarConfig = [
   },
   {
     collapsible: true,
-    text: "Istanbul'u Keşfet",
+    text: "GalataJS Keşfet",
     children: [],
   },
   {
     text: "Bizi Destekle",
     link: "/tr/other/support-us",
+  },
+  {
+    text: "Katkıda Bulun",
+    link: "/tr/other/contrubuting",
   },
 ];
