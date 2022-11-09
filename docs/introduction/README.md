@@ -55,7 +55,7 @@ yarn init galatajs
 
   </CodeGroupItem>
 
-  <CodeGroupItem title="NPM">
+ <CodeGroupItem title="NPM">
   
 ```bash:no-line-numbers
 npm init galatajs
